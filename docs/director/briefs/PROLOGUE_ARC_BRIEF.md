@@ -1,16 +1,16 @@
 creator: Mert
-status: UNDER_REVIEW
+status: APPROVED
 creative_authority: human
-claude_permission: proposal-on-delegation
+claude_permission: implement-approved-only
 
 ---
 
 # ARC BRIEF — THE PROLOGUE: COIN TOSS ISLAND
 
-> Structure from `templates/ARC_BRIEF.md`, extended with the scene map. **This document is a Claude
-> PROPOSAL drafted on Mert's explicit delegation ("Approve everything and lets begin," 2026-07-13),
-> built strictly from LOCKED canon.** Everything not already locked is proposal; Mert approves,
-> reshapes, or strikes. Prose is written only after Mert approves this map.
+> Structure from `templates/ARC_BRIEF.md`, extended with the scene map. Drafted by Claude on Mert's
+> delegation, built strictly from LOCKED canon. **Status: APPROVED (Mert, 2026-07-13 — "Approve the
+> map. Begin.").** Implementation (scene prose) is authorized; every scene remains subject to Mert's
+> final edit, which is authoritative.
 
 ## Arc name
 

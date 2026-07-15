@@ -1,5 +1,5 @@
 creator: Claude (implementation of LOCKED designs, per approved PROLOGUE_ARC_BRIEF S1)
-status: IMPLEMENTED_DRAFT — awaiting Mert's final edit (his edit is authoritative)
+status: IMPLEMENTED — accepted by Mert 2026-07-15 ("very good"); his final edit remains authoritative
 register: Writing Directive (LOCKED) — Narrator / Cast / Camera / Panel
 word_target: 800–1,000 (body ≈ 900)
 

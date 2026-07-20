@@ -13,8 +13,8 @@ dies with a sound like a kettle coming off the boil.
 «IF C6 = 2» It ends with horns.
 They rise off Merdou's brow like something surfacing — black, curved, WRONG for a human head and
 exactly right for the belt he's worn for seven years — and the man beneath them catches the
-Bell's arc on them like a lightning rod catches weather, walks it into the sand, and puts his
-fist through the champion's guard.
+Bell's arc on them, walks it down through his boots into the sand, and puts his fist through the
+champion's guard.
 "CLOSING TIME!!"
 Gups goes down. Forty rows have gone completely silent, every face asking the same question, and
 the question has horns.

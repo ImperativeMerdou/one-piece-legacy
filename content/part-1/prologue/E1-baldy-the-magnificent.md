@@ -16,6 +16,14 @@ Brakko hits him again. The whiskey in Merdou's fist slops over his knuckles.
 "Baldy's down two rounds!" the announcer yells from the rail. "Odds are moving! Odds are — wait,
 nobody's betting on Baldy. Odds are staying exactly where they are!"
 
+In the second row, a grandmother with a coin purse in her lap counts out five coppers, thinks
+better of it, and puts three back. Two bookies fight over her business anyway. Behind them the
+odds board shows BRAKKO in fat chalk and, under CHALLENGER, someone has just written *why*.
+
+Pit night at Gullwharf. Half the district is here — dye-girls off shift, wharfmen still in their
+boots, kids who are absolutely not allowed to be here watching through the fence slats and doing
+the commentary themselves.
+
 "THE MAGNIFICENT MERDOU," Merdou roars at the crowd, "IS PACING HIMSELF!"
 
 At the rail, a lean man in a high-collared coat sips his drink. Two stray cats sit on the rail
@@ -58,7 +66,7 @@ like, even if nobody knows what an Archon is.
 
 And Brakko — because he has never had two thoughts in the same evening — reaches into his
 waistband wrap and pulls out a foot of sharpened steel. In a fists-only pit. The boos start at
-the top bleachers and come down like weather.
+the top bleachers and come down row by row. One of the fence-slat kids boos loudest of all.
 
 Merdou rolls his neck. Sets his feet in the sand.
 

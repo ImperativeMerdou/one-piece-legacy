@@ -45,7 +45,7 @@ challenger apparently dance.
 with. Gups's ears go back.
 
 "MANNERS!!" The open palm cracks across the elephant's face — the first unscripted hit of the
-fight — and the sound it makes is the sound of eleven years ending.
+fight — and every head in the top row comes up at the sound of it.
 
 **PHASE — THE MONSTER.**
 
@@ -77,8 +77,7 @@ And frantic, he remembers his floor.
 He puts BOTH tusks into the mosaic and the whole floor goes white. Not aimed. Not at Merdou.
 Everywhere. The referee goes down twitching. Two of his own goons go down. The crowd barriers
 start to smoke, and the crowd — forty rows of his own island — finally sees the champion clearly:
-a huge gray shape standing in the middle of his burning chessboard, eyes small, myth cracked,
-spending eleven years of restraint in one breath.
+a huge gray shape standing in the middle of his own burning floor, eyes small, done pretending.
 
 "I AM THE WALL," Gups bellows, to no one, to everyone, "I KEEP YOU SAFE, I AM WHAT KEEPS THE
 STORY GOOD—"

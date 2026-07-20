@@ -1,7 +1,8 @@
 # ANTI-CLAUDEISM
 
-**Status:** GOVERNED — operational (Phase 1, 2026-07-20). Failure patterns observed in the frozen
-S1/S2 drafts (quoted here as diagnostic evidence only — S1/S2 themselves are unedited). Each entry:
+**Status:** GOVERNED — operational (Phase 1, 2026-07-20; updated Phase 2B). Failure patterns
+observed in the superseded S1/S2 drafts (now removed from the tree; quoted line references point
+to the versions preserved in git history at tag `pre-phase-1-surgery`). Each entry:
 pattern → real example → why it fails → operational replacement. This is a diagnostic sheet, not a
 banned-word dictionary; the test is always "could this be staged, said, or shown instead?"
 

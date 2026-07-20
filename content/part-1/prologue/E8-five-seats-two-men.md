@@ -6,8 +6,8 @@ The tide brings in a boat.
 
 A five-man fisher, sails set for harbor, riding clean — and the wharfmen who wade out to meet it
 come back up the jetty slow, hats in their hands. Five aboard. All dead. Days dead. The sea did
-it the way the sea does: no villain, no story, cold and water and time. They'd rigged for home
-and never finished getting there.
+it the way the sea does: cold, and water, and time. They'd rigged for home and never finished
+getting there.
 
 By the time Merdou and Ashren come down the Steps with their gear, half of Gullwharf is standing
 on the jetty, and the argument has already started.
@@ -52,9 +52,8 @@ as pirates.*
 «IF C8 = 3» It takes an hour. The pipe does it — a wharfman goes still, turns it over, and says,
 "That's Herrel. Marn's cousin's crew, out of the east shoals." So the five go up the Steps with
 names on them after all, and Auntie Marn closes the Kettle for the morning, and when it's done
-she comes down to the jetty with a brush and paints a word on the hull herself, because a boat
-that's been named by grief sails better than one that hasn't. She doesn't ask permission and
-they don't dream of stopping her.
+she comes down to the jetty with a brush and paints a word on the hull herself. She doesn't ask
+permission and they don't dream of stopping her.
 
 They load before the wind turns. Provisions «IF LIBERATED: pressed on them by half the district»
 «IF OWNED: delivered, invoiced to no one, by people who don't wait to be thanked» «IF TOPPLED:

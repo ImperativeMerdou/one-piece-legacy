@@ -116,6 +116,19 @@ items are answered.
     carries Mert's three verbatim rulings and awaits his review. *(This entry previously said
     "UNDER_REVIEW — no rule is active," which had been stale since the 2026-07-13 lock.)*
 
+## G2. Resolved in bulk by the Phase 2A interview + Phase 2B delegation (2026-07-20)
+
+24. ~~Prose register.~~ **RESOLVED (Mert, Phase 2A):** real-manga register; plain language a
+    normal person understands; no trailer lines; S1/S2 register rejected and rebuilt.
+25. ~~Island identity axes (item 13-adjacent), Merdou voice kit, Gups interior, Ashren
+    engines.~~ **RESOLVED:** Mert locked the cores in Phase 2A; Fable authored the remainder as
+    Working Canon under Phase 2B autonomous authority (see briefs, [L]/[W] markers).
+26. ~~Prologue structure.~~ **DELEGATED (Mert, Phase 2B):** Fable authorized to replace the
+    13-node map (6–8 scenes + sting, 6,000–9,000 words, progressive disclosure instead of the
+    symmetrical confession dump; full-mutual-honesty-by-departure lock preserved).
+27. **Still open for Mert:** laugh spelling ratification ("UHUHUHU!!" in test), any [W] item he
+    wishes to overturn, Groomed epithets/bounties, ship name, the two recruit slots.
+
 ## H. Safe to postpone
 
 20. **Research-artifact cleanup.** Whether to strip the `citeturn…` / `entity[…]` / `image_group{…}`

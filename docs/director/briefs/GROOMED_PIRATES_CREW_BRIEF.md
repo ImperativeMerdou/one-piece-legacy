@@ -1,87 +1,75 @@
-creator: Mert
-status: LOCKED
-creative_authority: human
-claude_permission: no-alteration-without-explicit-permission
+creator: Mert (locked core) + Fable (working canon, Phase 2B autonomous authority)
+status: LOCKED core + WORKING layer (rebuilt 2026-07-20, Phase 2B Stage 1)
+creative_authority: [L] = LOCKED (Mert) · [W] = WORKING (Fable; overturnable)
 
 ---
 
 # CREW BRIEF — THE GROOMED PIRATES (the Part-I crew)
 
-> Capture document for Mert's crew concept (2026-07-13). **This is the crew Merdou and Ashren join —
-> and the crew the Sabaody betrayal shatters.**
-> **Status: LOCKED (Mert, 2026-07-13).** Registered in `CREATIVE_REGISTRY.md`; Claude may not alter
-> without explicit permission. BLANK fields stay blank until Mert authors them.
+## Locked structure (unchanged)
 
-## Crew identity
-
-- **Name: The Groomed Pirates** — locked with authored meaning (Mert, 2026-07-13): **"Groomed — as in
-  groomed to be Pirate King or Pirate Queen."** The crew's name *is* its central rivalry: two claimants
-  to one throne, under one flag.
-- **Roster: FIVE** (Wornman, Britney, Pipper, Merdou, Ashren) — with **recruitment options for two
-  more across the next two arcs** (player-driven, per the contract's crew-agency rules).
-- **Recruitment happens at LOGUETOWN** (authored) — the boys sail there as planned; the News Coo story
-  brings Wornman hunting.
-- **State at recruitment:** freshly gathered; already own **a good ship** (unnamed) and supplies;
-  actively **hunting strong members to enter the Grand Line.**
-- **The recruitment hook (authored):** a **News Coo** carries the story of what happened on the betting
-  island — and **Wornman gets excited like a kid** to recruit Merdou and Ashren. *(Structural beauty:
-  the takeover's fame — the player's first world-mark — is literally what summons the plot.)*
+- [L] Name: **The Groomed Pirates** — "groomed to be Pirate King or Pirate Queen"; the name IS
+  the Wornman–Britney rivalry. Roster of five (Wornman, Britney, Pipper, Merdou, Ashren) + two
+  player-driven recruit options over the next two arcs. Recruitment at **Loguetown**, triggered
+  by the **News Coo** story of the Coin Toss takeover — Wornman gets excited like a kid. Good
+  unnamed ship, supplies, hunting strong members for the Grand Line. The crew the Sabaody
+  betrayal shatters (betrayer external, per locked contract). Every warm scene is a down payment.
 
 ## Captain — Wornman Hudson
 
-- **Build:** lean, athletic, slender, tall.
-- **Devil Fruit:** the **Coal Coal Fruit — a LOGIA** (confirmed, Mert 2026-07-13). *(Kit and
-  expression: OPEN — no canon coal fruit exists; a coal Logia in a former mine-slave's hands is the
-  power that ran the mine, become the miner. To be designed before his first on-page fight.)*
-- **Presence:** charismatic; **huge Jack Sparrow energy.**
-- **Dream: to become the Pirate King and find the One Piece.**
-- **Backstory (authored):** a sad one — **a child slave and worker in a mountain coal mine**; during
-  **a rebellion he stole the fruit from one of the operation's owners**; afterward found his first
-  mate, Britney. *(The power that ran the mine became the miner's freedom — and "rebellion" quietly
-  rhymes with Merdou's own buried fire.)*
-- **Naming audit:** Hudson — real name ✓; "Wornman" — root **approved (Mert, 2026-07-13):** English
-  *worn* + *man* — the worn-out man, the miner who was used up and got up.
+- [L] Lean, athletic, tall; **Coal Coal Fruit (Logia)**; huge Jack-Sparrow energy; dream: Pirate
+  King, find the One Piece; child mine-slave who stole the fruit during a rebellion; then found
+  Britney.
+- [W] **Voice:** grand theatrical optimism in the past tense of legends — narrates the present as
+  if it's already history ("And THAT, future biographers, is how your king acquired a mop").
+  Zero bitterness on the surface; the mine lives only in habits.
+- [W] **Laugh: "Kohohoho!"** — a cough that learned to be a laugh. Coal dust made it; he made it
+  his.
+- [W] **Habits (the mine, worn as swagger):** never sits with his back to an exit; eats standing;
+  hoards light — collects lamps, candles, lanterns in his cabin and lights all of them ("A king
+  should own the sun. This is a start.").
+- [W] **Kit (Logia, working):** soot-glide travel; **"SLAG COAT"** (hardened cinder armor);
+  **"FIREDAMP"** (a room-filling coal-dust cloud — one spark ends the conversation; real mining
+  terror, now his); **"SEAM FIRE"** (his rage move: the slow underground burn that never goes
+  out — ground ignition that smolders for the whole fight).
+- [W] **Weaknesses:** heavy rain and hard wind scatter him; deep water terrifies him beyond the
+  standard fruit-curse (chain memories) — he hides it with theater.
+- [W] Petty: reviews every wanted poster aesthetically ("The bounty's fine. The *font* is an
+  insult.").
 
 ## First mate — Britney D. Limonata
 
-- **Fighter:** swordswoman — **katana.**
-- **Look:** beautiful, classic One Piece bombshell; looks like a **pirate queen**; luxurious;
-  **super tall — near-admiral height** (like Merdou and Ashren).
-- **Manner:** ego-filled, "on the high road," loves to tease.
-- **Beliefs & dream:** considers herself **the best and strongest swordsman**; wants to become
-  **Queen of the Pirates instead** — a **huge rivalry with Wornman** over the same throne.
-- **The "D." — DELIBERATE (confirmed, Mert 2026-07-13):** the second D-carrier on the crew, beside
-  Merdou. **Ruled (Mert, 2026-07-13): nobody in the world gives the initial any meaning — only the
-  World Government knows what it signifies.** Aboard ship it's just a letter in two names; in Mary
-  Geoise it's a file.
-- **Naming audit:** Britney — real name ✓; Limonata — real word (lemonade) ✓.
+- [L] Katana swordswoman; classic bombshell, near-admiral height; ego-filled, high-road, loves to
+  tease; considers herself the best and strongest swordsman; wants to be **Queen** of the
+  Pirates — the throne rivalry with Wornman. Second "D." (world ignores it; Mary Geoise doesn't).
+- [W] **Voice:** regal tease — everyone is "darling" except Wornman ("*that man*"). Never raises
+  her voice; sharpens it.
+- [W] **Laugh: "Ohohoho"** — the classic queen's laugh, fully weaponized.
+- [W] **The running gag:** whenever anyone says "Pirate King," she appends **"—or Queen."**
+  without looking up. The crew now says it for her when she's absent, in her exact intonation.
+- [W] **Habit:** owns a velvet crown-box. It is empty. She checks it every morning like a watch.
+- [W] **Style: "Court Etiquette"** — swordplay named as royal ceremony: **"CURTSY"** (the low
+  sweep that isn't deference), **"ROYAL ASSENT"** (the draw-cut that ends petitions),
+  **"CORONATION"** (the overhead finisher — the crown descends).
+- [W] Genuinely bad at: cooking (banned from the galley by unanimous terrified vote).
 
 ## Crew — Pipper Graves
 
-- **Inspiration (authored):** **Graves** (League of Legends) × **Sentenza / Angel Eyes** (*The Good,
-  the Bad and the Ugly*) — the ruthless-cool outlaw gunman.
-- **Role, weapon, kit: OPEN** *(the inspirations point at a shotgun/gunslinger — Mert to confirm).*
-- **Naming audit:** Graves — real word ✓; "Pipper" — root **approved (Mert, 2026-07-13):** the
-  *pipper*, the aiming dot at the center of a gunsight reticle. A gunman named after the point of aim.
+- [L] The ruthless-cool outlaw gunman (Graves × Angel Eyes inspiration).
+- [W] **Voice:** minimal, dry, funeral-parlor courteous. **Does not laugh aloud** — exhales smoke
+  in rhythm, "hh. hh. hh." — a laugh you *see*, not hear.
+- [W] **Weapon:** lever double-bore shotgun named **"Eulogy."** Attacks: **"LAST RITES"**
+  (point-blank both bores), **"TWENTY-ONE"** (the rapid salute-volley), **"HEADSTONE"** (the
+  single slug that ends arguments at range).
+- [W] **Habits:** tips his hat to men he's about to shoot (funeral courtesy); keeps a little
+  black book of names — nobody has read it; he crosses one out sometimes and buys a round
+  without explaining (local mystery, long-fuse).
+- [W] **The Merdou friction (pre-built):** melee-purist Merdou vs. gunman. Standing exchange —
+  Merdou: "Guns are pussy shit." Pipper: "Sure. Stand over there."
+- [W] Genuinely bad at: apologizing; the crew has seen him try twice; both times he tipped his
+  hat and left.
 
-## The doom over all of it (design note)
+## Blanks remaining (deliberate)
 
-This crew's captain dreams of being **Pirate King** — and this is the crew whose story ends **betrayed
-and shattered in the Sabaody epilogue** (locked contract structure; betrayer comes from a rival Worst
-Generation crew). Part I is therefore the story of watching a Pirate-King dream die *months before
-Luffy's version of the same dream sets sail from the same archipelago.* Every warm scene aboard this
-ship is a down payment on that ending. The betrayal-timing law (Writing Directive §9.4) governs.
-
-## Question-round results (2026-07-13) and remaining blanks
-
-1. ~~Britney's "D."~~ **RESOLVED: deliberate.** Open residue: who aboard knows what it means.
-2. ~~Coal Coal Fruit type.~~ **RESOLVED: Logia.** Kit/expression still to be designed.
-3. ~~Crew name double-meaning.~~ **RESOLVED and locked with meaning:** *groomed to be Pirate King or
-   Pirate Queen* — the name is the rivalry.
-4. ~~Roster size.~~ **RESOLVED: five**, plus recruitment options for **two more across the next two
-   arcs** (player-driven).
-5. ~~Recruitment geography.~~ **RESOLVED: Loguetown.**
-6. ~~Name roots.~~ **RESOLVED: approved** (Wornman = worn man; Pipper = gunsight pipper).
-7. **Remaining blanks:** ship's name, jolly roger, epithets (Wornman, Britney), Pipper's kit and
-   personality beyond inspiration, bounties at recruitment, the Coal Logia's kit, who knows the D.'s
-   meaning, the two future recruit slots.
+Ship's name, jolly roger, epithets and bounties at recruitment, the two future recruit slots,
+who aboard knows what the "D." means — arc-design decisions, left open.

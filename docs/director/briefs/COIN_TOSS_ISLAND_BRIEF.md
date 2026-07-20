@@ -1,120 +1,110 @@
-creator: Mert
-status: LOCKED
-creative_authority: human
-claude_permission: no-alteration-without-explicit-permission
+creator: Mert (locked core) + Fable (working canon, Phase 2B autonomous authority)
+status: LOCKED core + WORKING layer (rebuilt 2026-07-20, Phase 2B Stage 1)
+creative_authority: [L] = LOCKED (Mert) · [W] = WORKING (Fable; overturnable)
 
 ---
 
 # ISLAND BRIEF — COIN TOSS ISLAND (the Prologue)
 
-> Structure copied from `templates/ISLAND_BRIEF.md`. Filled fields are Mert's (2026-07-13). **BLANK**
-> fields stay blank until Mert authors them. This island is the **first playable release** (contract).
-> **Status: LOCKED (Mert, 2026-07-13 — "lock everything").** Registered in `CREATIVE_REGISTRY.md`;
-> Claude may not alter without explicit permission.
+> Rebuilt: Mert's Phase 2A island core + Fable's completion under the Phase 2B rule that at least
+> half of names/customs must come from non-gambling roots (history, work, weather, family,
+> religion, absurd civic tradition). Prior brief in git history.
 
-## Island name
+## Core identity
 
-**Coin Toss Island** *(named by Mert, 2026-07-13).* Naming audit: a real English phrase — chance,
-gambling, and the two faces of one coin (the island of the two-sided Merdou–Ashren rivalry). Passes
-the naming law.
+- [L] **Beautiful and grand**: a cliff-and-mountain port in the North Blue — the city is built
+  **vertically into the mountain itself**. Roman architecture mixed with Gothic.
+- [L] Economy: **fishing and flower exports**. Gambling and pit fighting are major institutions —
+  **not the island's entire identity.**
+- [L] The signature flower: grows only here; the same bloom is either **painfully bitter or
+  candy-sweet, and you cannot tell before you bite.**
+- [L] The Marines protect Gups — **brainwashed by his propaganda**, institutionally corrupted.
 
-## Core concept / ruleset (one line)
+## Geography and first image
 
-**An island in the North Blue whose whole culture is betting and pit fighting** — and whose sickness
-is the same thing (authored). The pits made Merdou and Ashren's legend; the pits are also the rot.
+- [W] **Establishing shot:** a gray mountain rising straight from cold bright sea; stone terraces
+  climbing its face under strings of petal-dyed banners; the fishing fleet mobbed by gulls at the
+  base; at the summit, the ancient arena catching the sun.
+- [W] Districts, base to summit: **Gullwharf** (docks, fish-sheds, rope smell) → **the Six
+  Hundred Steps** (the great stair-streets; everything on the island is up or down) →
+  **Petal Row** (flower trade, dye vats, perfume and bees) → **Highbasket** (cliff gardens; the
+  flower fields hang in rope-and-basket terraces) → **the Crown** (the summit arena district;
+  Gups's seat).
+- [W] Climate: cold, clear, windy; blinding low sun in the evenings.
 
-## Divergence axes — change ≥4 of 7
+## History (non-gambling root)
 
-### Currency
-**BLANK.** *(Audit note: a betting culture begs a divergent currency — odds-slips, marker debts —
-Mert's to author.)*
-### Architecture
-**BLANK.** *(The colosseum presumably dominates — undesigned.)*
-### Food
-**BLANK.**
-### Fashion
-**BLANK.**
-### Climate
-**BLANK** (North Blue — cold seas by reputation; specific climate unauthored).
-### Polity
-**Authored in outline:** the island is run by "the authority" — the colosseum power structure headed by
-**Colosseum General Yuri Gups** and his many strong goons (see `YURI_GUPS_ENEMY_BRIEF.md`).
-### Language quirk
-**BLANK.**
+- [W] Founded centuries ago by **the Old Legion** — a shipwrecked legion who cut the Steps and
+  built the summit arena as their granary-and-assembly. The Roman bones are theirs; the Gothic
+  spires came with the flower money. Gambling arrived later, with the port. Gups brands himself
+  "Champion of the Old Legion's arena" in propaganda; the island's grannies find this hilarious
+  and dangerous in equal measure.
 
-## Politics and institutions
+## Daily life
 
-- The **colosseum** is the seat of power; **Yuri Gups** is its head general, unbeaten in the pits.
-- The island's **problems are its betting and pit-fighting culture** (authored) — the specific
-  mechanics of the rot (fixed matches? debt slavery? who profits?) are **undesigned.**
+- [W] **Food:** stonefin — the ugly, delicious local fish; **stonefin stew** is the island dish
+  (marrow argument mandatory). The **Maybe Flower** is eaten fresh, candied, or baked into
+  **maybe-buns** (one in six is bitter; office of baker is therefore a position of great civic
+  suspicion).
+- [W] **Drink:** petal mead; whatever Auntie Marn says you're having.
+- [W] **Clothing:** heavy gray wool dyed loud at collar and cuff with petal-dye — a gray city
+  wearing bright edges.
+- [W] **Music:** **step-shanties** — work songs timed to climbing the Steps; slow verses going up,
+  fast verses coming down. Tavern accordion at night.
+- [W] **Children's games:** *Ferryman* (a morbid tag game the adults pretend not to understand)
+  and **flower-bite dares** (bitter face loses).
+- [W] **Festival:** the **Bloom Haul** — first harvest basket eaten publicly petal by petal on the
+  arena steps, the whole town betting nothing but pride on sweet-or-bitter.
+- [W] **Sunblind** (absurd civic custom): at evening the western Steps catch the low sun and blind
+  everyone; by ancient custom all work stops for ten minutes of tea, complaints, and standing
+  still. Arriving anywhere "before Sunblind" is the island's unit of punctuality.
+- [W] **Superstitions:** a sweet petal at dawn means a lucky day; never whistle on the Steps
+  (it calls the wind).
+- [W] **Dispute custom:** petty civic disputes are settled by solemn coin flip — market stalls,
+  queue order, christening arguments — presided over by whichever granny is nearest. (The one
+  gambling-rooted custom retained; the island's soul in miniature.)
 
-## How locals logically obey the island's ruleset
+## The rot (machinery, concrete)
 
-**BLANK** — needs authoring (why do people accept the pits' rule?).
+- [L] Gambling/pits as institution; Gups's authority; Marine protection via propaganda.
+- [W] **The Toll:** every business on the Steps pays Gups's colosseum "for the island's glory."
+  Collectors in good coats; ledgers in the Crown.
+- [W] **The Ferry** — the thing nobody names. The dawn boat that takes defaulted debtors
+  off-island. Nobody says where it goes. Parents go quiet; children turned it into a tag game.
+  (Design note: the Ferry is a debt-bondage pipeline; its full destination is deliberately left
+  dark in the prologue — a local mystery, not a Void-tier one.)
+- [W] **Why nobody removes Gups:** the *story* works — the propaganda says the champion keeps the
+  island safe and famous; the Marines validate it; the Toll is survivable; the Ferry is quiet;
+  and everyone who might lead a change is in the ledgers. Obedience looks like cheering.
 
-## Threat / danger
+## What the island feels
 
-**Yuri Gups and his goons** — the authority Merdou and Ashren beat before taking over the island.
+- [W] **Loves:** the terraces at Sunblind; the Bloom Haul; their own legendary stubbornness about
+  the Steps ("six hundred and none of them even").
+- [W] **Tolerates:** the Toll; the fixed odds everyone pretends not to know about.
+- [W] **Afraid to name:** the Ferry.
 
-## Role in its arc
+## Cast of the island (working canon; one-scene extras remain freely inventable)
 
-**The Prologue of Part I — the first playable release.** Authored beat-outline (Mert, 2026-07-13):
-1. **The tavern scene** — memorable, funny, warm, "as One Piece as possible" — and its engine
-   (authored): **Merdou and Ashren open up to each other for the first time**, each telling his
-   backstory — the patricide and the genocide traded across a tavern table — **and that confession
-   kickstarts the story:** they say **"fuck it"** and finally decide to do something with their lives.
-   *(Structural gift: both origin flashbacks are delivered diegetically, in-voice, in one scene — the
-   prologue's fuse. **RESOLVED, Mert 2026-07-13: each of them reveals EVERYTHING.** From the prologue
-   on, Merdou and Ashren hold no secrets from each other — the only two people in the world who know
-   both truths.)*
-2. **They beat the authority** — Yuri Gups and his goons — the match the island was robbed of for
-   years (see resolved flag 1).
-3. **They take over the island — and what becomes of it is PLAYER-DECIDED** *(RESOLVED, Mert
-   2026-07-13)*: **the game's first three-stance moral fork.** Legacy Dial 2 starts ticking here; the
-   prologue teaches the player their choices are real.
-4. **The gifted boat** *(authored, Mert 2026-07-13)*: a small five-person boat, given to them by
-   **five people who die on arrival — literally.** They believed they had reached land and were
-   finally saved; they died the moment the boat touched shore. Two men now sail a boat built for
-   five, inherited from five dead. *(**RESOLVED, Mert 2026-07-13: it's a mundane tragedy of the sea —
-   no planted mystery, "not everything needs to have a meaning."** The weight is in what it does to
-   the two men, not in a puzzle. Boat's name: still BLANK.)*
-5. **Departure for Loguetown** — to truly begin, and to find a crew to join. *(Audit notes below.)*
+- [W] **Auntie Marn** — iron-haired keeper of **The Copper Kettle** (Gullwharf tavern); runs the
+  taps like a helmsman in a storm; feeds half the district; unofficial queen of the grannies.
+- [W] **Joro** — young stonefin fisherman; the rigged-bet debtor whose table starts everything.
+- [W] **Sergeant Hale** — the Marine liaison who sincerely believes Gups's propaganda; honest
+  hands, captured mind (the "sincere justice" foil Merdou can respect-hate).
+- [W] **Odd-Eye Priya** — Gups's bookkeeper and odds-fixer; runs the Toll ledgers (see Gups brief).
+- [W] **Brakko the Anvil** — chain-fisted goon-tier pit bruiser (retained from old S1; recurring).
 
-## Countdown mechanism (if any)
+## Role in arc / beats
 
-**BLANK.**
+- [L] The Prologue; first playable release. Tavern ignition, Gups confrontation, player-decided
+  takeover (LIBERATE / OWN / TOPPLE), the five-dead boat (mundane sea tragedy, no hidden
+  meaning), departure for Loguetown. All staged per the rebuilt arc map
+  (`PROLOGUE_ARC_BRIEF.md`).
+- [L] Post-takeover state is persistent tracked state; the island returns in papers and memory.
 
-## First-scene visual read (identifiable in three frames)
+## Naming audit
 
-**BLANK** — *(the tavern, presumably, but undesigned).*
-
-## Mysteries or payoffs planted here
-
-- The **Merdou–Ashren rivalry legend** (Bret/Shawn) lives here — the island that took sides is the
-  island they now rule and leave behind: **the first entry in the world-mark ledger.**
-- The island's post-takeover state is **persistent tracked state** — what they leave behind can be
-  revisited, referenced in the papers, and weighed by the endings.
-- **Prologue duties (structural):** first Narrator card, first three-stance choice, first fight that
-  answers a question, first DON!!, first TO BE CONTINUED — the tutorial for the whole game's grammar.
-
----
-
-## Audit flags (analysis, not authorship)
-
-1. ~~The Gups paradox.~~ **RESOLVED (authored, Mert 2026-07-13):** Gups **kept ducking them** — he
-   even arranged an Ashren-and-Merdou vs. Gups match, then **lied that he was injured**; he ducked
-   and lied until **the people got tired.** He is **a coward — but a strong coward.** The prologue's
-   fight is the match the island was robbed of for years.
-2. ~~The concealment question.~~ **RESOLVED (Mert, 2026-07-13): they TRY to conceal — and the game
-   decides what happens.** Concealment is a *stake inside the fight's choice design*: the player can
-   be pushed toward the edge where winning costs exposure (the Bull's horns, the flame) and choose.
-   The fight's three-stance choices carry both men's secrets as live currency — the purest possible
-   tutorial for how this game treats consequences.
-3. **North Blue Mink precedent:** canon-consistent (Bepo — a Mink raised in North Blue). No conflict.
-4. **Loguetown logistics:** Loguetown is in **East Blue**; crossing Blues is canon-feasible (the
-   Vinsmoke/Sanji precedent) but needs one line of route logic near a Red Line junction. Flagged.
-5. ~~Loguetown canon proximity.~~ **RESOLVED (Mert, 2026-07-13): Smoker/Tashigi are ON the table** —
-   the crossing "makes sense, as if Eiichiro Oda planned this." Requires a locked
-   `CANON_ENCOUNTER_BRIEF.md` when the Loguetown stop is designed.
-6. **Timeline anchor:** the tavern "fuck it" happens ~a few months before the Straw Hats form
-   (contract). Consistent; noted.
+Non-gambling names: Gullwharf, Six Hundred Steps, Petal Row, Highbasket, the Old Legion, Copper
+Kettle, Auntie Marn, Joro, Hale, Brakko, stonefin, Sunblind, step-shanties, Ferryman. Gambling-
+rooted: Coin Toss Island [L], the Crown/arena culture, coin-flip custom, Maybe Flower (nature
+itself gambles here). Ratio comfortably exceeds the required half.

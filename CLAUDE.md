@@ -14,14 +14,17 @@ Full definition: `docs/director/PROJECT_CONTRACT.md` (LOCKED).
 
 ## Current development phase
 
-- Phase 0 (governance) and Phases 1–2 (contract + founding canon) are **complete**. The project is
-  **past Phase 0**: story design is underway under Mert's direction.
-- Current state: **Phase 1 instruction reset** (repair of the instruction stack after the
-  2026-07-20 audit — `AUDIT/FABLE_FULL_REPOSITORY_AUDIT.md`).
-- Implemented content: prologue scenes S1 and S2 exist and are **FROZEN pending Mert's review**
-  (see § Frozen content). The prologue arc map is APPROVED but flagged for restructuring review.
-- No game runtime, engine, or state schema is implemented yet. `docs/runtime/STORY_ENGINE.md`
-  defines the target machinery; nothing executes it.
+- Phase 0 (governance), Phase 1 (instruction reset, audit-driven), and Phase 2A (creative
+  foundation interview) are **complete**.
+- Current state: **Phase 2B autonomous build** (branch `build/phase-2-autonomous-prologue`):
+  Fable holds delegated creative authority under Mert's two-tier model — **LOCKED CANON**
+  (Mert-confirmed; unchangeable without his ruling) vs **WORKING CANON** (Fable-authored;
+  overturnable by Mert). Major Decision Gates (Mert's Phase 2B order) still require stopping.
+- Implemented content: the rebuilt prologue (scenes E1–E8 + sting) under `content/part-1/prologue/`.
+  The old S1/S2 drafts and 13-node map are superseded — preserved in git history
+  (tag `pre-phase-1-surgery`, branch history), not in the working tree.
+- No executable runtime yet; `docs/runtime/STORY_ENGINE.md` defines schema and sidecar format,
+  which the prologue's state files follow.
 
 ## Creative authority
 
@@ -98,14 +101,12 @@ essays — see next section), `docs/director/WRITING_DIRECTIVE.md` (ARCHIVED),
 - Before reusing any factual claim from them, verify it independently
   (`docs/production/RESEARCH_INDEX.md` lists known errors per file).
 
-## Frozen content
+## Superseded content (formerly frozen)
 
-`content/part-1/prologue/S1-the-pit.md` and `content/part-1/prologue/S2-the-tavern.md` are
-**FROZEN**: byte-for-byte unchanged pending Mert's post-audit review. Do not edit, rewrite, or
-re-annotate them. (Known defects — including a text corruption at S2:41 and a non-vocabulary
-status header in S2 — are documented in the audit and stay in place until Mert unfreezes.)
-`docs/director/briefs/PROLOGUE_ARC_BRIEF.md` (the 13-node map) is likewise frozen pending Mert's
-ruling on the audit's compression proposal.
+Mert's Phase 2B order (2026-07-20) unfroze and superseded the old S1/S2 drafts and the 13-node
+prologue map: their register was rejected in Phase 2A ("well-written prose about a show that is
+not even One Piece — rebuild"). Originals are preserved in git history; the rebuilt prologue
+(E1–E8 + sting) replaces them. Do not imitate the old drafts' register.
 
 ## Change control
 
@@ -143,7 +144,7 @@ docs/production/
   READING_LEDGER.md                ← ARCHIVED production record
   UNRESOLVED_DECISIONS.md          ← open questions for Mert (GOVERNED)
 templates/                         ← 12 blank creative-brief templates (blank by design)
-content/part-1/prologue/           ← S1, S2 (FROZEN)
+content/part-1/prologue/           ← rebuilt prologue: E1–E8 + sting, with .state.yaml sidecars
 reference/                         ← visual-reference workspace; raw-private/ is gitignored
 ONE PIECE RESEARCH/                ← ARCHIVED research essays — never auto-loaded
 ```

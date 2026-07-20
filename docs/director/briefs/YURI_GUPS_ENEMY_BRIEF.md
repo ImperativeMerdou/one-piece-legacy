@@ -1,94 +1,94 @@
-creator: Mert
-status: LOCKED
-creative_authority: human
-claude_permission: no-alteration-without-explicit-permission
+creator: Mert (locked core) + Fable (working canon, Phase 2B autonomous authority)
+status: LOCKED core + WORKING layer (rebuilt 2026-07-20, Phase 2B Stage 1)
+creative_authority: [L] = LOCKED (Mert) · [W] = WORKING (Fable; overturnable)
 
 ---
 
 # ENEMY BRIEF — YURI GUPS (Prologue antagonist)
 
-> Structure copied from `templates/ENEMY_BRIEF.md`. Filled fields are Mert's (2026-07-13). **BLANK**
-> fields stay blank until Mert authors them. **Status: LOCKED (Mert, 2026-07-13 — "lock
-> everything").** Registered in `CREATIVE_REGISTRY.md`; Claude may not alter without explicit
-> permission.
+## Core (locked)
 
-## Name
+- [L] Huge **elephant Mink**; head Colosseum General of Coin Toss Island; **genuinely strong AND
+  genuinely cowardly**; unbeaten record protected by planning and corruption; runs propaganda that
+  has the **Marines protecting him**; controls debt and collectors; wants **legitimacy and public
+  love as champion**; his system can survive his defeat.
+- [L] The ducking machine: his goons **monitor Merdou's drunkenness**; for years he has tried to
+  book the match against a drunk, nerfed Merdou; by comic accident Merdou kept turning up sober;
+  Gups cancelled last-second every time ("the old injury").
+- [L] Powers: **Armament Haki** (a real coater in a Blue) + **Electro fused with Armament** —
+  hardened lightning. Beaten by Merdou and Ashren (outcome locked); his aftermath is
+  player-decided per takeover fork.
 
-**Yuri Gups.** *(Naming audit: "Yuri" is a real, traceable name. For "Gups," Claude's PROPOSED root —
-awaiting Mert's yes: **"gup"** — real Anglo-Indian slang for **boastful talk, idle gossip** (as in
-"gupshup"). Yuri Gups: the champion whose entire record is talk. If Mert had a different root in mind,
-his wins.)*
+## Epithet and presentation
 
-## Epithet
+- [W] **"Yuri the Unbeaten."** Portraits on the Steps; his trunk raised like a saluting arm. Tiny
+  spectacles, silk cloths, immaculate ledgers — the fastidious clown who is genuinely dangerous.
+- [W] Laugh: **"Mmohohoho"** — starts as a hum in the trunk, ends in a purr of self-satisfaction.
 
-**BLANK.** *(An unbeaten colosseum champion has one, guaranteed — the pits would have named him.)*
+## Ideology (what he genuinely believes)
 
-## Faction / affiliation
+- [W] **"Hope must be undefeated."** An island with an unbeaten champion doesn't riot, doesn't
+  despair, doesn't leave. He sincerely believes his myth is a public service — that protecting
+  the record IS protecting the island, and that risking it against real opponents would be
+  *selfish*. His cowardice wears the costume of civic duty, and he gives speeches about it.
+- [W] Wants beyond wealth: **a statue in the Crown** — to be loved the way founders are loved
+  ("Champion of the Old Legion's arena," says the propaganda; the Legion would have hanged him).
+- [W] Proud of: the ledgers (a masterpiece of interlocking debt), the arena's fame, his trunk.
+- [W] Humiliated by: laughter. Mockery of the record. Being compared to the fighters he ducked.
 
-Head **Colosseum General** of the Pit Island authority; commands **many strong goons.**
+## The system (how the island obeys)
 
-## Role in the arc
+- [W] **The Toll** funds the spectacle; **Odd-Eye Priya** runs the fix and the debt ledgers; the
+  **collectors** enforce quietly; **the Ferry** disappears the insolvent at dawn; **Sergeant
+  Hale's Marines** provide legitimacy — Gups feeds them piracy "intelligence" and a hero story,
+  and they sincerely believe the island is the North Blue's safest port *because of him*.
+- [W] Rewards loyalty with cushy arena jobs and quiet debt forgiveness; destroys resistance with
+  audits, smear campaigns, fixed matches that ruin a defiant fighter's purse and name — violence
+  only by proxy, and rarely, because violence makes stories he can't write.
+- [W] What he is actually **brave** about: his books. In a fire he would walk through flame for
+  the ledgers — they are the only fights he never dodged.
 
-**The Prologue's boss** — the authority Merdou and Ashren beat before taking over the island.
+## Combat design (geography-first)
 
-## The system this enemy embodies
+- [W] **The arena is his weapon.** Years ago he had the Crown's floor relaid with "decorative"
+  **copper inlay** — the mosaic is circuitry. His Electro travels the floor, the rails, the
+  chains, the great bronze **bell** above the champion's gate. He only ever fights *here*. That
+  is the system in one fact: the coward engineered the venue.
+- [W] Named techniques (pompous-legalist register — he fights like a magistrate passing sentence):
+  - **"IVORY LAW"** — Armament-black tusks, a sweeping gore-charge; the elephant remembers he is one.
+  - **"TRUNK GAVEL"** — the coated trunk slams down; "order" declared on your spine.
+  - **"THUNDER TOLL"** — Electro dumped into the floor-circuit; the whole mosaic bites.
+  - **"JUDGMENT BELL"** — his finisher: charges the bronze bell and rings it; the arc leaps from
+    the bell to the coated tusks to you. Heard all the way down the Steps.
+- [W] Fight progression (three phases, argument-driven):
+  1. **The Showman** — scripted spectacle: floor tricks, "accidental" goon interference, referee
+     calls, playing to the crowd. He expects to win the way he always wins: prearranged.
+  2. **The Monster** — first real pain. The script dies and the strong coward stops pretending:
+     Ivory Law, Trunk Gavel, real Armament. This is a genuine North Blue monster who never
+     needed the fix — that's the horror of him.
+  3. **The Panic King** — the myth cracks in public. Not tears: **escalation without limits** —
+     Thunder Toll flooding the floor, Judgment Bell aimed *through* the crowd and the stands.
+     Exposed cowardice makes him MORE dangerous, because the showman's restraint was the only
+     mercy he had. (This phase feeds the concealment-crisis choice.)
 
-The island's rot itself: **the betting and pit-fighting culture** — spectacle as governance. *(The
-specific machinery — fixed odds, debt, who profits — is undesigned; see the island brief's Gups
-paradox.)*
+## Weaknesses
 
-## Ideology / dream
+- [W] **Discoverable (systemic):** he has never taken an unscripted hit. Real pain doesn't make
+  him fold — it makes him *abandon the script*, and off-script he is strong but sloppy:
+  telegraphed rage, wasted charge, tunnel vision on whoever hurt him.
+- [W] **Known-but-costly (situational):** public mockery of the record pulls him off Merdou and
+  onto the crowd/structure — exploitable only if you're willing to make bystanders the target.
+  Winning that way costs the island, and the game counts it.
+- [L→W] His ego (Mert's authored core) is the root of both.
 
-**BLANK** beyond the authored core: **ego.** A dickhead filled with it.
+## The fight's argument
 
-## Wound
+- [L] *The island's spectacle is a lie, and the two men the lie was built to avoid have finally
+  stepped into the ring.*
 
-**Cowardice wearing a champion's belt (authored, Mert 2026-07-13):** he **kept ducking** Merdou and
-Ashren — even arranged the match, then **lied that he was injured** — and ducked and lied until the
-people got tired. **A coward, but a strong coward:** the Armament is real, the Electro is real, and
-none of it has ever been risked against the two men who mattered.
+## After his fall
 
-## On-stage contradiction
-
-**Meticulous but goofy** (authored) — a careful, detail-obsessed operator who is also, unavoidably,
-ridiculous. *(A deeply Oda villain shape: the fastidious clown who is genuinely dangerous.)* And
-beneath it the deeper contradiction (authored): **genuinely strong and genuinely a coward** — power
-that has spent years protecting its record instead of proving it.
-
-## Silhouette anchor + the one weird thing
-
-- **Anchor:** a **huge elephant Mink** — trunk, bulk, tusks; the biggest thing in any frame he's in.
-- **The one weird thing: BLANK.**
-
-## Power
-
-- **Unbeaten in the pits** (authored — but see the Gups paradox in the island brief: unbeaten, or
-  *protected*?).
-- **Armament Haki** — a real coater in a Blue sea, which makes him a legitimate local monster.
-- **Special move (authored):** Mink **Electro fused with Armament** — hardened lightning.
-- Canon consistency: a Mink in North Blue has direct precedent (Bepo); Electro is racial; Electro +
-  Haki layering is canon-legal for strong Minks.
-
-## Weaknesses — one systemic, one situational
-
-**BLANK** — undesigned. *(His ego is the obvious systemic candidate, but that's Mert's call.)*
-
-## The argument their fight makes (one sentence)
-
-**Confirmed by the authored ducking history (Mert, 2026-07-13):** *the island's spectacle is a lie,
-and the two men the lie was built to avoid have finally stepped into the ring.*
-
-## Reputation / how the world speaks of them
-
-Unbeaten champion-general of the pits — **BLANK** beyond that (does his name carry off-island?).
-
-## Fate (win, loss, death, escape, alliance)
-
-**Beaten by Merdou and Ashren** (authored). His aftermath is **PLAYER-DECIDED** (Mert, 2026-07-13) —
-the range of authored fates (death, exile, servitude, comedy…) is designed per takeover-fork branch
-during arc design, consistent with the island's player-decided outcome.
-
-## Payoffs planted or paid off
-
-**BLANK.** *(Candidate: the first witness of Merdou's true strength — what Gups saw in that fight, and
-who he might tell, is a plantable seed. Mert's to decide.)*
+- [W] The system outlives him unless dealt with: Priya and the ledgers, the collector class, the
+  Toll, the Ferry contract, and Hale's sincere propaganda-belief each persist or die by the
+  takeover fork (LIBERATE burns the books · OWN inherits them · TOPPLE breaks the machine and
+  crowns no one). His personal fate is player-decided within the chosen fork.

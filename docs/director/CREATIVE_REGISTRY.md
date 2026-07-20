@@ -2,6 +2,16 @@
 
 **Status of this document:** GOVERNED — the single record of APPROVED and LOCKED creative canon.
 
+**Two-tier authority model (Mert, Phase 2B, 2026-07-20):** project facts are either **LOCKED
+CANON** (explicitly confirmed by Mert — unchangeable without his ruling) or **WORKING CANON**
+(authored by Fable under delegated autonomous authority — freely improvable/replaceable by Fable,
+overturnable by Mert at any time). Briefs mark provenance line-by-line as [L]/[W]. The Phase 2A
+interview read-back (2026-07-20, in-session) is the source of record for the newest [L] facts:
+Merdou's voice/codes/record, Ashren's flaw/engines, the island core (mountain port, Roman-Gothic,
+fish+flower, the two-taste flower, Marine propaganda protection), Gups's coward-system, and the
+mythology budget (heirlooms+Conqueror's essential; Void Century late-game; apex knowers optional;
+the world knew the father, not the son).
+
 **Rules.**
 
 - Nothing is registered here until **Mert approves and locks it** (see `DIRECTOR_CHARTER.md §3`).
@@ -77,7 +87,10 @@ Entry format (to be used only when Mert locks something):
   `docs/director/briefs/BULL_OF_HEAVEN_DEVIL_FRUIT_BRIEF.md`
 
 ## Arcs
-*(empty — no arc locked)*
+
+- **The Prologue: "The Coin Lands"** — Coin Toss Island, 8 scenes + sting — STATUS: WORKING
+  CANON map (Fable, Phase 2B Stage 2; replaces the frozen 13-node APPROVED map, which is
+  preserved in git history) — brief: `docs/director/briefs/PROLOGUE_ARC_BRIEF.md`
 
 ## Canon encounters
 *(empty — none locked; on the table by Mert's direction: Smoker/Tashigi at Loguetown; Ashren–King and

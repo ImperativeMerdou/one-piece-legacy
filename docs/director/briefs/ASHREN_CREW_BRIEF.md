@@ -1,147 +1,95 @@
-creator: Mert
-status: LOCKED
-creative_authority: human
-claude_permission: no-alteration-without-explicit-permission
+creator: Mert (locked core) + Fable (working canon, Phase 2B autonomous authority)
+status: LOCKED core + WORKING layer (rebuilt 2026-07-20, Phase 2B Stage 1)
+creative_authority: [L] = LOCKED (Mert) · [W] = WORKING (Fable; overturnable)
 
 ---
 
 # CREW CANDIDATE BRIEF — ASHREN (the second Supernova)
 
-> Structure copied from `templates/CREW_CANDIDATE_BRIEF.md`. Filled fields are Mert's (2026-07-13).
-> **Status: LOCKED (Mert, 2026-07-13 — "lock everything"):** all PROPOSED items below were ratified.
-> **BLANK** fields stay blank until Mert authors them; **SEALED** mysteries are Mert's. Registered in
-> `CREATIVE_REGISTRY.md`. Claude may not alter this brief without Mert's explicit permission.
+> Rebuilt from the 2026-07-13 locked brief + Phase 2A rulings. Prior brief in git history.
 
-## Name
+## Identity
 
-**Ashren.** **Root (Claude-sourced at Mert's request; approved 2026-07-13):** **ASH + WREN** — *ash*,
-what remains after fire (the Lunarian genocide; the burning race), + *wren*, one of the smallest birds
-that still flies. **The little bird that survived the fire.** The size contrast with King (a
-pteranodon; Ashren's wings are smaller, his frame a size down) is built into the name. Two real
-English words, fully traceable — the naming law is satisfied.
+- [L] **Ashren** — half-Lunarian; ash + wren ("the little bird that survived the fire"). Smaller
+  wings than King, frame a size down. Second Supernova of the continuity (100M+ by Sabaody).
+- [L] Presence: King-adjacent silhouette but **animated, theatric, drama-loving** — never the
+  permanently silent type.
+- [W] Pit ring-name: **"The Persuader"** (his flail; real-world weapon slang — the pits know him
+  as polite, precise, and horribly patient).
+- [L] Epithet (papers, later): deferred until his bounty exists — and for a hidden Lunarian,
+  being named is dangerous. Left open on purpose.
 
-## Epithet
+## Role and bond
 
-**BLANK** — needed before Sabaody (a 100M+ Supernova gets named by the papers whether he likes it or
-not — and for a hidden Lunarian, being named is dangerous; see Gatekeeping #4).
+- [L] The **planner and brain**; ice to Merdou's fire; counterweight, never subordinate. He does
+  not worship Merdou.
+- [L] Why he stays: both **fell from grace**, both stuck in the gutter years, bonded in the
+  legendary pit battle **he won**. He is the first person who saw the laughing drunk get beaten
+  and stayed.
+- [L] Leave condition: only if Merdou truly became the opposite of himself (a full character 180).
+  Fight condition: Merdou doing dumb shit that endangers them both or (later) their crew.
 
-## Role on the crew
+## Voice
 
-**Merdou's best friend and opposite** — the cool to his explosive. Second Supernova of the continuity
-(contract-confirmed): independently earns a 100,000,000+ bounty by Sabaody, the Killer-alongside-Kid
-pattern. Formal crew position: **BLANK** (Part-I crew structure undesigned).
+- [L] Cool, dry, economical baseline — until anger: **he talks too much and gets annoying when
+  angry** (the cool guy who will not shut up). Trades roasts with Merdou constantly.
+- [L] Humor: **schadenfreude** — misery and misfortune crack him up; Merdou's failures are his
+  favorite entertainment.
+- [W] Laugh: **"Kihihihi"** — thin, delighted, escapes through his teeth precisely when someone
+  eats pavement. (Working; test in scenes.)
+- [W] Verbal tic: understates catastrophe by exactly one degree ("That's inconvenient," as the
+  building collapses).
 
-## Dream the protagonist cannot grant
+## The flaw (real, costly)
 
-**To revive his tribe** — the exterminated Lunarian race. Merdou can conquer the world for him and it
-still would not raise the dead; the dream is his alone. *(It also powers the comedy: the man wants to
-repopulate a species — his perversion has a mission statement. He flirts, he nosebleeds, he loves
-women, and underneath the gag is a genocide survivor doing arithmetic. Authored by Mert.)*
-**The King compass (authored, Mert 2026-07-13):** the dream's collision with canon is **planned** — an
-**Ashren–King encounter is scheduled for Part II**, where **Wano will be a huge arc.** Every canon
-element of it (King, Kaido's crew, Wano itself) still requires its own locked
-`CANON_ENCOUNTER_BRIEF.md` when that design begins.
+- [L] **Lunarian supremacism.** Believes his blood is biologically superior to everyone alive;
+  actively promotes his race's greatness and inevitable return. A genuine ugly flaw with in-story
+  consequences, never endorsed by the narrative.
+- [L] Public mode: preaches Lunarian greatness as a **"history buff"** (third-person scholarship);
+  private mode: full rants to Merdou only.
+- [L] **Crusader switch:** genocide-shaped evil (slavery, exterminations, the Ferry's trade) flips
+  him from cool planner to relentless zealot — his serious register, and where his flaw and his
+  wound are the same organ.
 
-## Wound
+## Comedy engines
 
-- **The taken parent:** his Lunarian parent was **taken by the World Government.** What happened after
-  is a **SEALED MYSTERY — nobody knows.** *(Which parent, and the human parent's fate: ruled
-  deliberately unimportant by Mert, 2026-07-13 — "who cares." Sealed indefinitely, revealable only if
-  he ever changes his mind.)*
-- **The hunted life:** a 100,000,000-berry information bounty hangs over his race's very existence; he
-  has spent his life as contraband made flesh, hiding his wings under concealment gear
-  (King-adjacent in function, to be designed "more creative and original").
+- [L] The coolness gag: genuinely effortlessly cool, sometimes tries too hard and it collapses.
+- [L] Constant running sexual comedy — he is a pervert with a mission statement; it seasons him
+  but does not dominate him.
+- [L→W] **Nosebleed replaced (Mert ordered original mechanism):** when genuinely flustered his
+  suppressed **flame sputters** — sparks at the collar, a curl of smoke off his shoulders, a
+  smell of struck matches. Funny *and* an exposure liability: his gag can out him.
+- [L] **Animals follow him.** Cats and dogs trail him inexplicably; [W] they especially ruin his
+  romantic performances (a cat on the shoulder mid-line, every time).
+- [L] Bad at **real** romance: when it turns genuine he gets lost and stupid.
+- [L] Embarrassed by not living up to his own hype. [L] Grooms his wings obsessively —
+  [W] carries a small silver wing-comb he pretends is a knife-sharpener.
 
-## On-stage contradiction
+## Dream and wound (unchanged locked core)
 
-- **Fiery but calculating** (authored) — Lunarian blood, chess-player head.
-- **The coolness gag (authored):** he is genuinely, effortlessly cool — *aura*, "he is him" moments,
-  the man an audience instantly loves — and **sometimes he tries too hard and it collapses into
-  comedy.** The gap between the cool he is and the cool he performs is his recurring-gag engine (the
-  comic-relief exception rule applies: his one moment of genuine unperformed courage will hit like a
-  spread).
-- **The pervert with a cause** — flirtation as both gag and grief.
+- [L] Dream: **revive the Lunarian tribe** — survives as-is (Mert, Phase 2A). Merdou cannot grant
+  it. The Ashren–King Wano collision remains planned (Part II; canon briefs required then).
+- [L] Wound: parent taken by the World Government (SEALED); life as contraband made flesh under
+  the 100M information bounty; cannot flame in public — a lit Lunarian is a confessed Lunarian.
+- [W] **Pre-exposition behavioral tells** (the grief shown before any backstory): he counts exits
+  in every room; sits with sightlines to the door; goes silent-still at the smell of large fires
+  (cookfires fine, buildings not); never haggles with children — pays whatever kids ask.
 
-## Voice / speech flavor (identifiable from one line)
+## Combat
 
-Cool, dry, economical — the deadpan counterweight to Merdou's tavern thunder — until women or
-coolness-performance are involved, at which point the register faceplants. **Specific verbal tics:
-BLANK.**
+- [L] Half-Lunarian traits at reduced grade: flame generation, flame-linked durability trade-off,
+  endurance. In public he cannot flame at all — fights handicapped whenever the world watches.
+- [L] Weapon: **flail** — articulated timing, arcs, calculation (the opposite grammar of Merdou's
+  rigid brute force).
+- [W] Named techniques (calculated, precise, deadpan — his register):
+  - **"METRONOME"** — rhythmic figure-eight guard-shredding; he counts aloud, politely.
+  - **"OVERDUE"** — the delayed wrap-around strike that arrives one beat after you relaxed.
+  - **"FULL STOP."** — the finisher. Spoken flat, never shouted. The sentence ends.
+- [L] Devil Fruit: early Part II, identity undesigned (unchanged).
 
-## Silhouette anchor + the one weird thing
+## Relationships
 
-- **Anchor:** smaller wings than King's, a frame a size below King's; concealment gear hiding the
-  wings and heritage — **design open** ("more creative and original than King's").
-- **The one weird thing: BLANK.**
-
-## Power or skill
-
-- **Half-Lunarian physiology — all the racial traits, nerfed by half-lineage** (authored): fire
-  generation, the flame-linked durability, the endurance — at reduced grade.
-  **Approved (Mert, 2026-07-13):** the King trade-off inherited in miniature — flame lit = harder to
-  hurt, flame doused = faster but vulnerable — and, critically for Part I: **in public he cannot flame
-  at all** (a lit Lunarian is a confessed Lunarian). The crew's second-strongest man fights
-  handicapped whenever the world is watching; the day he finally burns openly is a spread-worthy
-  debut (Writing Directive, Transformation Debut Law).
-- **Devil Fruit: he gets his fruit early in Part II** (authored, Mert 2026-07-13) — he wants a strong
-  one; canon precedent for race + fruit stacking exists (King's Ancient Zoan). **Fruit identity:
-  undesigned** — proposals available when Part II design begins.
-- **Weapon (authored, Mert 2026-07-13): a flail.** The blunt family shared with Merdou, spoken in the
-  opposite grammar — Merdou's mace is rigid brute-force; the flail is articulated timing, arcs, and
-  calculation. Two pit-fighters, one language, two accents. *(Named techniques: BLANK.)*
-
-## Domain of necessity (the plot cannot progress without them)
-
-**BLANK at the mechanical level** (crew roles undesigned) — but narratively already load-bearing: he
-is the proof that Merdou can be *chosen*. The first person who saw the laughing drunk getting beaten
-in a pit and stayed.
-
-## Recruitment conditions
-
-**Pre-recruited by fate (authored):** the pits matched them. **Ashren beat the fuck out of Merdou** —
-and was shocked to find the man *laughing* through the beating. Drunk, mid-thrashing, Merdou told him:
-**if he had someone like Ashren as a friend, he would conquer the world.** Then: multiple scraps, a
-**legendary pit rivalry the whole island took sides on** — the Bret Hart vs. Shawn Michaels of the
-underworld — and friendship after. *(Their shared history is pre-game canon; how they jointly enter
-the Part-I crew is arc design.)*
-
-## Internal-conflict axis (argues about everything except loyalty)
-
-**Approved (Mert, 2026-07-13) — the Legacy opposition:** Merdou *destroyed* his family and runs
-from its name; Ashren is trying to *resurrect* his and runs toward it. The crew's two strongest men
-are opposite answers to the same question — what do you owe the dead? Merdou's recklessness with his
-own name will genuinely frighten a man who cannot afford to be seen; Ashren's caution will read as
-cowardice to a man who cannot be moved. They argue about *visibility, risk, and what a legacy is for*
-— never about each other.
-
-## Can they die or betray? (ties to tone ceiling)
-
-Governed by the contract's crew policy: independent character; may die permanently, leave, or oppose —
-**only through causally-grounded, Mert-locked design.** Nothing pre-decided here. *(He is not the
-Part-I betrayer — the betrayer comes from a rival Worst-Generation crew, per locked contract
-structure.)*
-
-## Relationships within the crew
-
-- **Merdou:** best friend, pit-rival, the first believer. The drunk conquest line is the friendship's
-  founding text — plantable from the prologue, payable at every crux after.
-- Everyone else: **BLANK** (crew undesigned).
-
----
-
-## Gatekeeping flags (structural audit — analysis, not authorship)
-
-1. **The friendship writes itself but the recruitment doesn't:** their history is pre-game; the game
-   must still *show* it (flashback law: once, at maximum impact) and stage how both men enter the
-   Part-I crew together. Arc design.
-2. ~~The King compass — planned or forbidden?~~ **RESOLVED 2026-07-13: planned.** Ashren–King
-   encounter scheduled for Part II; **Wano will be a huge Part-II arc.** Requires locked
-   `CANON_ENCOUNTER_BRIEF.md`s (King, Kaido's crew, Wano) when Part II design begins — these will be
-   the heaviest canon briefs in the project.
-3. ~~Fruit timing.~~ **RESOLVED 2026-07-13: early Part II.** Fruit identity and balance still
-   Mert-owned, undesigned.
-4. **His fame is a fuse:** every berry of bounty buys attention, and attention is the one thing a
-   hidden Lunarian cannot afford. His Supernova rise is structurally a countdown to exposure — a
-   built-in Part I/II engine, but it needs deliberate pacing (his personal phantom problem).
-5. **Blank fields:** epithet, verbal tics, the one weird thing, named flail techniques, crew role,
-   formal recruitment scene.
+- [L] Merdou: the founding text stands — the beating, the laughing, the drunk conquest line.
+  Progressive mutual disclosure across the prologue (new arc map); **by departure, no secrets
+  between them** (Mert's lock honored).
+- Everyone else: built at crew phase.

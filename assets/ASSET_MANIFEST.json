@@ -6,9 +6,9 @@
     {
       "filename": "play/engine/backgrounds.js",
       "source": "original",
-      "creator": "Fable (Phase 3C)",
+      "creator": "Fable (Phase 3C; crown-hall + counting-house added Phase 3E)",
       "license": "project-internal original work",
-      "contents": "17 layered SVG scene backgrounds: island-establishing, gullwharf, pit-night, kettle-interior, steps-night, petal-row, highbasket, fishing-district, marine-post, propaganda-street, crown-exterior, arena-tunnel, arena-floor, arena-wrecked, debt-cells, dawn-harbor, open-sea, groomed-deck, storm-harbor",
+      "contents": "21 layered SVG scene backgrounds: island-establishing, gullwharf, pit-night, kettle-interior, steps-night, petal-row, highbasket, fishing-district, marine-post, propaganda-street, crown-exterior, crown-hall, counting-house, arena-tunnel, arena-floor, arena-wrecked, debt-cells, dawn-harbor, open-sea, groomed-deck, storm-harbor",
       "scene_usage": "all episodes",
       "modification": "n/a",
       "redistribution_allowed": true,

@@ -296,6 +296,52 @@
     <path d="M640,560 l220,0 l0,90 l-220,0 Z" fill="#46372a"/><rect x="660" y="580" width="60" height="40" fill="#8fb6d9" opacity=".4"/>
     ${[...Array(4)].map((_,i)=>`<circle cx="${480+i*160}" cy="640" r="20" fill="url(#lamp)" opacity=".7"/><circle cx="${480+i*160}" cy="640" r="6" fill="#ffd98a"/>`).join('')}`,'dawn');
 
+  /* --- Crown receiving hall (Gups's) --- */
+  BG['crown-hall']=svg(`
+    <rect width="1600" height="900" fill="#242433"/>
+    <path d="M0,900 L0,160 Q800,40 1600,160 L1600,900 Z" fill="#33313f"/>
+    ${[...Array(5)].map((_,i)=>{const x=140+i*310;
+      return `<path d="M${x},760 L${x},330 q75,-90 150,0 L${x+150},760 Z" fill="#262532"/>
+      <path d="M${x+16},760 L${x+16},345 q59,-72 118,0 L${x+134},760 Z" fill="#8fa6c2" opacity=".28"/>
+      <path d="M${x+75},345 L${x+75},760 M${x+16},520 L${x+134},520" stroke="#262532" stroke-width="9"/>`;}).join('')}
+    ${[...Array(6)].map((_,i)=>`<rect x="${60+i*292}" y="200" width="30" height="560" fill="#3d3a4a"/><rect x="${54+i*292}" y="180" width="42" height="26" fill="#494559"/><rect x="${54+i*292}" y="754" width="42" height="26" fill="#494559"/>`).join('')}
+    <path d="M0,760 L1600,760 L1600,900 L0,900 Z" fill="#2c2a38"/>
+    ${[...Array(9)].map((_,i)=>`<path d="M${-40+i*200},900 L${60+i*200},760 l40,0 L${0+i*200},900 Z" fill="#242230" opacity=".7"/>`).join('')}
+    <path d="M540,820 L1060,820 L1030,760 L570,760 Z" fill="#4a3a2c"/>
+    <path d="M560,760 L1040,760 L1040,748 L560,748 Z" fill="#5c4936"/>
+    <path d="M700,748 q10,-26 34,-26 q22,0 30,26 Z" fill="#d8d2c2"/>
+    <circle cx="880" cy="726" r="17" fill="#d8d2c2"/><path d="M880,743 l0,5" stroke="#d8d2c2" stroke-width="5"/>
+    <path d="M660,300 l280,0 l-16,120 l-248,0 Z" fill="#8e2f35"/>
+    <path d="M700,330 q100,-46 200,0 l-14,58 q-86,-30 -172,0 Z" fill="#d8b64a" opacity=".85"/>
+    <circle cx="800" cy="560" r="120" fill="url(#lamp)" opacity=".35"/>
+    <circle cx="300" cy="480" r="60" fill="url(#lamp)" opacity=".3"/><circle cx="1300" cy="480" r="60" fill="url(#lamp)" opacity=".3"/>
+    <rect x="1180" y="560" width="260" height="200" fill="#3d3a4a"/>
+    ${[...Array(4)].map((_,i)=>`<rect x="${1194+i*62}" y="580" width="48" height="160" fill="#57422e"/><rect x="${1194+i*62}" y="580" width="48" height="12" fill="#d8b64a" opacity=".5"/>`).join('')}`,'night');
+
+  /* --- Priya's counting-house --- */
+  BG['counting-house']=svg(`
+    <rect width="1600" height="900" fill="#26221e"/>
+    <path d="M0,900 L0,180 L1600,180 L1600,900 Z" fill="#332d26"/>
+    <path d="M0,180 L1600,180 L1600,210 L0,210 Z" fill="#2a251f"/>
+    ${[...Array(2)].map((_,s)=>{const x0=s?1120:80;
+      return [...Array(4)].map((_,r)=>`<rect x="${x0}" y="${240+r*130}" width="400" height="14" fill="#211c17"/>
+      ${[...Array(11)].map((_,i)=>`<rect x="${x0+8+i*36}" y="${254+r*130}" width="26" height="100" fill="${['#57422e','#4a3a2c','#5c3a34','#3f3a2c'][(i+r+s)%4]}"/><rect x="${x0+8+i*36}" y="${254+r*130}" width="26" height="10" fill="#d8d2c2" opacity=".25"/>`).join('')}`).join('');}).join('')}
+    <path d="M560,900 L560,470 L1040,470 L1040,900 Z" fill="#3f362c"/>
+    <path d="M560,470 L1040,470 L1020,440 L580,440 Z" fill="#4a4034"/>
+    <rect x="600" y="500" width="400" height="16" fill="#332b22"/>
+    <path d="M640,440 l0,-90 M960,440 l0,-90" stroke="#211c17" stroke-width="8"/>
+    <path d="M600,350 l400,0 l0,-14 l-400,0 Z" fill="#211c17"/>
+    <path d="M760,336 q40,-40 80,0 l-8,0 q-32,-30 -64,0 Z" fill="#8a7440"/>
+    <path d="M800,296 l0,40 M770,316 l60,0" stroke="#8a7440" stroke-width="5"/>
+    <circle cx="770" cy="330" r="10" fill="#d8b64a"/><circle cx="830" cy="322" r="10" fill="#d8b64a"/>
+    ${[...Array(5)].map((_,i)=>`<rect x="${620+i*76}" y="${486-((i*7)%3)*8}" width="34" height="${14+((i*11)%3)*8}" fill="#d8b64a" opacity=".75"/>`).join('')}
+    <rect x="700" y="560" width="200" height="120" fill="#2c261f"/>
+    <path d="M710,570 l180,0 M710,600 l180,0 M710,630 l140,0 M710,660 l180,0" stroke="#161310" stroke-width="6"/>
+    <circle cx="800" cy="260" r="90" fill="url(#lamp)" opacity=".5"/><circle cx="800" cy="252" r="10" fill="#ffd98a"/>
+    <rect x="240" y="700" width="180" height="200" fill="#2a251f"/>
+    <path d="M240,700 l180,0 l0,14 l-180,0 Z" fill="#211c17"/>
+    <circle cx="330" cy="790" r="34" fill="url(#lamp)" opacity=".35"/>`,'dusk');
+
   /* --- storm harbor --- */
   BG['storm-harbor']=svg(`
     <rect width="1600" height="900" fill="#161c26"/>

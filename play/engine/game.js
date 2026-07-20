@@ -260,8 +260,9 @@ function doChoice(b){
   return true;
 }
 function pickOption(b,o,wrap,btn){
+  if(MODE.busy)return;
   MODE.busy=true;
-  [...wrap.querySelectorAll(".copt")].forEach(x=>{if(x!==btn)x.classList.add("faded");});
+  [...wrap.querySelectorAll(".copt")].forEach(x=>{x.onclick=null;if(x!==btn)x.classList.add("faded");});
   btn.classList.add("picked");
   S.choices.push({id:b.id,opt:o.id,label:o.label});
   dbg("CHOICE "+b.id+" -> "+o.id);

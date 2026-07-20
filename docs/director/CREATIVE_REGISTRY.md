@@ -27,8 +27,10 @@ Entry format (to be used only when Mert locks something):
 
 - **One Piece: Legacy — PROJECT CONTRACT** — the boundaries and identity of the entire game — STATUS:
   LOCKED — LOCKED: 2026-07-13 (Mert: "lock everything") — doc: `docs/director/PROJECT_CONTRACT.md`
-- **WRITING DIRECTIVE (Anime Register, Rev 3 + Panel layer)** — the prose and presentation law —
-  STATUS: LOCKED — LOCKED: 2026-07-13 — doc: `docs/director/WRITING_DIRECTIVE.md`
+- **WRITING DIRECTIVE (Anime Register, Rev 3 + Panel layer)** — former prose and presentation law —
+  STATUS: **ARCHIVED** (Phase 1 reset, 2026-07-20; historical lock of 2026-07-13 preserved in the
+  document) — no longer active authority; Mert's three verbatim register rulings remain in force
+  via `docs/writing/ONE_PIECE_SCENE_GRAMMAR.md` §0 — doc: `docs/director/WRITING_DIRECTIVE.md`
 
 ## Protagonist elements
 

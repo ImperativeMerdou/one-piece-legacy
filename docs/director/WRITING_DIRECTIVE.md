@@ -1,6 +1,33 @@
 # WRITING DIRECTIVE
 
-**Status of this document:** GOVERNED — **LOCKED (Mert, 2026-07-13 — "lock everything"; includes
+**Status of this document: ARCHIVED (Phase 1 instruction reset, 2026-07-20 — Mert-approved
+surgery; audit: `AUDIT/FABLE_FULL_REPOSITORY_AUDIT.md` §§3–4, Task 3).**
+
+> **⚠ THIS DOCUMENT IS SUPERSEDED AND NOT ACTIVE.**
+>
+> - It does **not** govern writing. Active writing guidance lives in
+>   `docs/writing/ONE_PIECE_SCENE_GRAMMAR.md`, `docs/writing/ANTI_CLAUDEISM.md`,
+>   `docs/writing/FIGHT_DIRECTION.md`, and `docs/writing/SCENE_GATE.md`.
+> - It must **never be auto-loaded** into writing context and must **never be cited as creative
+>   authority.**
+> - **It is not a direct transcription of Mert's rulings.** Mert's actual recorded rulings within
+>   it are three: *"Prose and writing needs to be exactly like the real anime show"*; *"what is
+>   happening in the show and manga, I want it to happen in this tale. I want me to be the MC of my
+>   own show"*; and his delegation *"I leave it to you to put the One Piece Eiichiro Oda paint"*
+>   (`docs/production/UNRESOLVED_DECISIONS.md` item 19). Those three rulings remain in force and
+>   are carried verbatim into `ONE_PIECE_SCENE_GRAMMAR.md` §0. The remaining rules below were
+>   **derived by Claude from the archived research corpus** and labelled with Mert's authority —
+>   the drift mechanism documented in audit §4-D1. The audit found this document's formulas to be
+>   the primary source of the prose drift in S1/S2.
+> - The text below is preserved **unchanged** as a historical record (including its original
+>   LOCKED header and its internally contradictory "⟨REV 3 — UNDER_REVIEW⟩" section markers —
+>   see audit §5 #3). Do not edit it; do not obey it.
+
+---
+
+## Original document (historical record — inactive)
+
+**Status of this document (historical, superseded):** GOVERNED — **LOCKED (Mert, 2026-07-13 — "lock everything"; includes
 Revision 2, the Panel layer §0.4, and the ⟨REV 3⟩ fight laws).** Mert's register ruling governs:
 *"Prose and writing needs to be exactly like the real anime show"* — and his thesis for the whole
 work: *"what is happening in the show and manga, I want it to happen in this tale. I want me to be the

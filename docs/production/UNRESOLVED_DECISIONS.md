@@ -58,9 +58,10 @@ items are answered.
    old campaign material stays DEPRECATED unless Mert explicitly names it.
 7. ~~**Devil Fruit vs Haki-only vs other.**~~ **RESOLVED 2026-07-13** — **Mythical Zoan, Model: Bull
    of Heaven** (chosen after Shuten-dōji was scrapped for balance), scoped to own-body momentum, with a
-   **Haki-first fighting identity**. Brief drafted:
-   `docs/director/briefs/BULL_OF_HEAVEN_DEVIL_FRUIT_BRIEF.md` (UNDER_REVIEW; kit/awakening proposals
-   await Mert's approval).
+   **Haki-first fighting identity**. Brief:
+   `docs/director/briefs/BULL_OF_HEAVEN_DEVIL_FRUIT_BRIEF.md` — **LOCKED (Mert, 2026-07-13,
+   "lock everything"; PROPOSED sections ratified by that blanket approval).** *(Status corrected
+   during Phase 1 reset, 2026-07-20 — this entry previously said UNDER_REVIEW, which was stale.)*
 8. ~~**Protagonist name sourcing.**~~ **RESOLVED 2026-07-13** — protagonist named **Merdou** of the
    Archon D. Dynasty. Roots traceable (Merdou ← creator's name; Archon ← Greek "ruler"); the formal
    naming audit lives in the protagonist brief.
@@ -106,11 +107,14 @@ items are answered.
     § Canon-baseline policy (graduated divergence; Straw Hat protections pre-divergence-approval; Sabaody
     as first mandatory crossover). Each specific encounter still requires a locked
     `CANON_ENCOUNTER_BRIEF.md`.
-19. ~~**Writing directive.**~~ **RESOLVED 2026-07-13** — Mert delegated the stylistic layer to Claude
-    ("I leave it to you to put the One Piece Eiichiro Oda paint..."); `docs/director/WRITING_DIRECTIVE.md`
-    has been drafted from `ONE_PIECE_EPISODES_ANATOMY_RESEARCH.md` Parts III–V and
-    `ONE_PIECE_FIGHT_LAW.md` Parts A–B, plus the approved contract policies. **Status: UNDER_REVIEW —
-    no rule is active until Mert approves the draft.**
+19. ~~**Writing directive.**~~ **RESOLVED 2026-07-13, then SUPERSEDED 2026-07-20** — Mert delegated
+    the stylistic layer to Claude ("I leave it to you to put the One Piece Eiichiro Oda paint...");
+    `docs/director/WRITING_DIRECTIVE.md` was drafted from the research corpus and LOCKED by Mert's
+    2026-07-13 blanket approval — then **ARCHIVED in the Phase 1 instruction reset** after the
+    2026-07-20 audit found it the primary drift source (audit §4-D1). Active prose guidance now
+    lives in `docs/writing/` (SCENE_GRAMMAR, ANTI_CLAUDEISM, FIGHT_DIRECTION, SCENE_GATE), which
+    carries Mert's three verbatim rulings and awaits his review. *(This entry previously said
+    "UNDER_REVIEW — no rule is active," which had been stale since the 2026-07-13 lock.)*
 
 ## H. Safe to postpone
 

@@ -5,8 +5,11 @@ it was fully processed, what is malformed, and what *kind* of claims each file c
 evidence base that `RESEARCH_INDEX.md` and `CLAUDE.md` cite. It records processing status only — it does
 **not** approve any content as project canon.
 
-**Status of this document:** GOVERNED — production record. Update when a research file is added, removed,
-edited, or re-audited.
+**Status of this document:** ARCHIVED (Phase 1 instruction reset, 2026-07-20). Superseded as the
+operative research guide by `docs/production/RESEARCH_INDEX.md`, which carries the post-audit
+reliability findings (`AUDIT/FABLE_FULL_REPOSITORY_AUDIT.md` §6). Preserved unchanged below as a
+processing record. Note: the audit found this ledger's reliability grades too generous — e.g. "no
+invented percentages" (below) while the episode-anatomy file invents several. Trust the new index.
 
 **Sourcing categories used below** (qualitative, checkable — no invented percentages):
 

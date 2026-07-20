@@ -1,118 +1,160 @@
 # CLAUDE.md — Project Constitution
 
-Permanent operating rules for this repository. Read before any work. This is the short constitution; the
-governing detail lives in `docs/director/DIRECTOR_CHARTER.md`, and the research evidence in
-`docs/production/`.
+Operating rules for this repository. Accurate as of Phase 1 instruction reset (2026-07-20, branch
+`repair/phase-1-instruction-reset`). If this file contradicts observed repository state, the file is
+wrong: say so and stop, do not improvise around it.
 
-## What this project is
+## Project identity
 
-A **fully authored, deterministic, offline One Piece Choose-Your-Own-Adventure text RPG.**
+**One Piece: Legacy** — a private, fully authored, deterministic, offline One Piece CYOA text RPG.
+Three parts (Pre-Timeskip → Post-Timeskip → Final Saga). Fixed original protagonist. Real permanent
+consequences; loss is a branch, not game-over. No AI, no API, no live generation at play-time.
+Strictly private: Mert and his friends only; never distributed or sold.
+Full definition: `docs/director/PROJECT_CONTRACT.md` (LOCKED).
 
-- **Deterministic & offline.** No AI, no API, no live generation at play-time. The game is authored content
-  plus an engine that checks approved state and selects among **authored** scenes and consequences.
-- **Exactly three authored choices** at ordinary decision points. Choices are **character stances, not
-  tactical optimizations** (`ONE_PIECE_FIGHT_LAW.md` Part B).
-- **Structured in three parts:** Pre-Timeskip → Post-Timeskip → Final Saga.
-- **Real outcomes:** meaningful victories, failures, injuries, deaths, betrayals, alternate arc endings.
-  **Loss is a branch, not game-over.** If a character dies, they stay dead.
-- **Recognizably One Piece:** adventure, comedy, absurdity, wonder, emotional sincerity, political cruelty.
-- **Protected from** generic AI prose, fake branching, and permanent grimdark drift.
+## Current development phase
 
-## Who decides
+- Phase 0 (governance) and Phases 1–2 (contract + founding canon) are **complete**. The project is
+  **past Phase 0**: story design is underway under Mert's direction.
+- Current state: **Phase 1 instruction reset** (repair of the instruction stack after the
+  2026-07-20 audit — `AUDIT/FABLE_FULL_REPOSITORY_AUDIT.md`).
+- Implemented content: prologue scenes S1 and S2 exist and are **FROZEN pending Mert's review**
+  (see § Frozen content). The prologue arc map is APPROVED but flagged for restructuring review.
+- No game runtime, engine, or state schema is implemented yet. `docs/runtime/STORY_ENGINE.md`
+  defines the target machinery; nothing executes it.
 
-**Mert is the sole creative director.** He alone designs and approves the protagonist, islands, enemies,
-factions, potential crew, ships, powers, story, relationships, canon divergences, visual decisions, arc
-endings, and all permanent consequences. Creative content exists **only** because Mert authored or
-approved it.
+## Creative authority
 
-## Claude may / may not
+**Mert is the sole creative director.** Creative content exists only because Mert authored or
+approved it. Claude may: research, organize, ask demanding design questions, identify
+contradictions, critique CONCEPT/UNDER_REVIEW material, make clearly labelled PROPOSALS **only when
+Mert explicitly asks**, and implement APPROVED designs. Claude may not: invent missing creative
+material, silently fill blanks, canonize research examples, alter LOCKED material without explicit
+permission, or design story elements unprompted. Full loop and status rules:
+`docs/director/DIRECTOR_CHARTER.md`.
 
-**May:** research; organize; ask demanding design questions; identify contradictions; critique weak
-concepts; test ideas against the research; build blank templates; make **clearly labelled PROPOSALS only
-when Mert explicitly asks**; implement designs **after Mert approves**.
+**A ruling is Mert's only if his words are on record.** Claude-derived rules must be labelled as
+Claude recommendations and never presented with Mert's authority. (This rule exists because the
+archived Writing Directive violated it — see audit §4-D1.)
 
-**May not:** invent missing creative material; silently fill blanks; canonize research examples; assume any
-prior protagonist (incl. **Archon D. Merdo**) is current; treat old campaign material as approved canon;
-design islands/enemies/crew unprompted; write sample scenes unbidden; write game code, install
-dependencies, or pick the tech stack during Phase 0; use AI during gameplay.
+## Canon boundaries
 
-**Permission by status:** critique CONCEPT and UNDER_REVIEW; implement APPROVED; do **not** alter LOCKED
-without explicit permission. **Blank fields stay blank.** Templates never contain invented project
-concepts.
+- Established One Piece canon is the baseline setting and timeline.
+- Naming a canon character/place/event in research or briefs approves nothing. Every specific canon
+  encounter, divergence, relationship, or intervention requires its own locked
+  `templates/CANON_ENCOUNTER_BRIEF.md`.
+- Locked canon lives **only** in `docs/director/CREATIVE_REGISTRY.md` (which links each element's
+  brief). Old campaign material ("Archon D. Merdo") is deprecated; only the "Archon D." dynasty
+  name was deliberately restored by Mert.
+- Hard line, above everything: all sexual content involves adults (18+) only.
 
-## The production loop (never skip a step)
+## Blank-field rule
 
-```
-HUMAN CONCEPT → CLAUDE QUESTIONS → HUMAN ANSWERS → STRUCTURAL AUDIT → HUMAN REVISION →
-HUMAN APPROVAL → LOCKED DESIGN → IMPLEMENTATION → PLAYTEST → HUMAN FINAL EDIT
-```
-
-Only Mert advances a concept to APPROVED and LOCKED. The STRUCTURAL AUDIT is analysis, not authorship.
-Full detail in `docs/director/DIRECTOR_CHARTER.md`.
+**Blank fields stay blank until Mert answers them.** BLANK and SEALED markers in briefs are
+decisions *not yet made* or *deliberately withheld* — never license to infer. Templates never
+contain invented project concepts. If a scene or document needs a blank field filled, stop and ask
+Mert; do not write around it with invention.
 
 ## Status vocabulary (single source of truth)
 
 `EMPTY → CONCEPT → UNDER_REVIEW → APPROVED → LOCKED → IMPLEMENTED → PLAYTESTED`
+plus, for non-creative documents only: `GOVERNED` (operating doc) and `ARCHIVED` (preserved,
+not active, never auto-loaded, not citable as authority). Only Mert advances creative statuses.
+Every document carries exactly one status in its header.
 
-Approved/locked canon is recorded **only** in `docs/director/CREATIVE_REGISTRY.md` — which is empty until
-Mert locks something.
+## Active reading order
 
-## Canon hygiene
+Load in this order, and nothing else, for ordinary work:
 
-- **Established One Piece canon is the baseline setting and timeline** of this project (setting reference).
-- **But** naming a canon character, place, or event in research does **not** approve any specific
-  encounter, timeline divergence, relationship, or intervention. Each such use requires a locked
-  `templates/CANON_ENCOUNTER_BRIEF.md`.
-- **Research examples and interpretations are not project decisions.** Old original campaign material —
-  including the **Archon D. Merdo** protagonist (whose showrunner bible has been removed from the repo) —
-  is **DEPRECATED and non-canon** unless Mert explicitly restores it.
+1. `CLAUDE.md` (this file)
+2. `docs/director/DIRECTOR_CHARTER.md` — authority + production loop
+3. `docs/director/PROJECT_CONTRACT.md` — locked project boundaries
+4. `docs/director/CREATIVE_REGISTRY.md` — what is actually locked
 
-## No AI / no SillyTavern machinery at runtime
+Then, per task:
 
-This game runs no model at play-time. The SillyTavern dossier that carried live-AI machinery (sampler
-presets, DRY sampler, token budgets, narrator cards, lorebook architecture) has been **removed** from the
-repo — none of it belongs here. The only remaining live-AI framing is `One Piece research 2.md` §7 ("hand
-this to a writer or an AI"), which is **human-authoring guidance only** — never wire it into a runtime.
+- **Scene writing** (only when Mert has authorized the scene): `docs/writing/SCENE_GATE.md`,
+  `docs/writing/ONE_PIECE_SCENE_GRAMMAR.md`, `docs/writing/ANTI_CLAUDEISM.md`,
+  `docs/runtime/CHARACTER_RUNTIME_CARDS.md`, plus the LOCKED briefs of the elements on stage.
+  For fight scenes add `docs/writing/FIGHT_DIRECTION.md`.
+- **Engine/state work**: `docs/runtime/STORY_ENGINE.md`.
+- **Design questions for Mert**: `docs/production/UNRESOLVED_DECISIONS.md`.
+- **Visual reference study**: `docs/research/VISUAL_REFERENCE_PROTOCOL.md`.
 
-## Anti-slop, anti-fake-branching, anti-grimdark-drift
+**Never auto-loaded** (consult only on a specific question, via `docs/production/RESEARCH_INDEX.md`,
+which states each file's reliability): the seven files in `ONE PIECE RESEARCH/` (ARCHIVED research
+essays — see next section), `docs/director/WRITING_DIRECTIVE.md` (ARCHIVED),
+`docs/production/READING_LEDGER.md` (ARCHIVED).
 
-- **Anti-slop:** no empty hype, samey voices, blow-by-blow combat, or lore-dumping. Prose rules will live
-  in `docs/director/WRITING_DIRECTIVE.md` (currently a blank governed scaffold).
-- **Anti-fake-branching:** choices must lead to genuinely different authored consequences and persistent
-  state; no cosmetic forks.
-- **Anti-grimdark-drift:** darkness has a permanent ceiling (a Mert-owned decision — see
-  `docs/production/UNRESOLVED_DECISIONS.md §E`). Warm/absurd baseline; darkness lands because it departs
-  from that baseline.
+## Research: archived, not law
 
-## Combat model (research-consistent, not a conflict)
+`ONE PIECE RESEARCH/` contains seven AI-generated craft essays. They hold useful observations,
+**zero followable citations, known factual errors, and many overgeneralized "laws"**
+(audit §6). Rules:
 
-The research says "matchups are authored, not computed" (`ONE_PIECE_POWERS_SCALING RESEARCH.md` Laws 3/15).
-The project **keeps** this: outcomes are authored; branches are deterministic; the engine checks approved
-story state (injuries, techniques, knowledge, relationships, equipment, prior choices, location, promises,
-witnesses, route flags) to select authored scenes. No universal power-tier calculator, "balanced kits," or
-procedural combat simulation is required. The open technical question is logged in
-`UNRESOLVED_DECISIONS.md §A`.
+- They are **ARCHIVED reference**. They must not load during ordinary scene-writing work.
+- Nothing in them is an Oda statement, a project decision, or a writing law.
+- Consulting them never authorizes copying, canonizing, or citing them as authority.
+- Before reusing any factual claim from them, verify it independently
+  (`docs/production/RESEARCH_INDEX.md` lists known errors per file).
 
-## Phase discipline
+## Frozen content
 
-**Phase 0 = governance scaffolding only.** No story design, no protagonist/island/enemy/crew creation, no
-tech stack, no code, no dependencies, no pre-filled templates. Later phases begin only with Mert's
-approval and the relevant unresolved decisions answered.
+`content/part-1/prologue/S1-the-pit.md` and `content/part-1/prologue/S2-the-tavern.md` are
+**FROZEN**: byte-for-byte unchanged pending Mert's post-audit review. Do not edit, rewrite, or
+re-annotate them. (Known defects — including a text corruption at S2:41 and a non-vocabulary
+status header in S2 — are documented in the audit and stay in place until Mert unfreezes.)
+`docs/director/briefs/PROLOGUE_ARC_BRIEF.md` (the 13-node map) is likewise frozen pending Mert's
+ruling on the audit's compression proposal.
 
-## Repository map
+## Change control
+
+- Every creative element passes the charter loop; only Mert advances to APPROVED/LOCKED.
+- **Blanket approvals are insufficient for briefs containing BLANK fields required by the next
+  implementation step** — flag such locks for per-item confirmation instead of proceeding.
+  *(Operational safeguard from audit §23.2; charter amendment itself awaits Mert.)*
+- Status changes are committed together with the change they describe.
+- No commits or pushes without Mert's instruction. Never merge repair branches into `main`
+  without his explicit approval.
+
+## Repository map (current)
 
 ```
-CLAUDE.md                         ← this constitution
-docs/production/
-  READING_LEDGER.md               ← per-file audit of the research
-  RESEARCH_INDEX.md               ← per-doc purpose, rules, contradictions, do-not-canonize flags
-  UNRESOLVED_DECISIONS.md         ← open questions for Mert, grouped by gate
+CLAUDE.md                          ← this constitution
+AUDIT/                             ← 2026-07-20 forensic audit + Phase 1 report
 docs/director/
-  DIRECTOR_CHARTER.md             ← authority + production loop (governing)
-  CREATIVE_REGISTRY.md            ← locked canon (empty until Mert locks)
-  WRITING_DIRECTIVE.md            ← prose rules (blank governed scaffold)
-templates/                        ← 12 blank creative-brief templates
-ONE PIECE RESEARCH/               ← source research; craft reference, NOT approved canon. Do not edit.
+  DIRECTOR_CHARTER.md              ← authority + production loop (GOVERNED)
+  PROJECT_CONTRACT.md              ← project boundaries (LOCKED)
+  CREATIVE_REGISTRY.md             ← locked canon record (GOVERNED)
+  WRITING_DIRECTIVE.md             ← ARCHIVED — superseded, not active (see its banner)
+  briefs/                          ← 7 locked/approved creative briefs (blanks stay blank)
+docs/writing/
+  ONE_PIECE_SCENE_GRAMMAR.md       ← scene toolbox (GOVERNED, operational)
+  FIGHT_DIRECTION.md               ← fight toolbox (GOVERNED, operational)
+  ANTI_CLAUDEISM.md                ← failure patterns + corrections (GOVERNED, operational)
+  SCENE_GATE.md                    ← pre-write / pre-commit scene test (GOVERNED, operational)
+docs/runtime/
+  STORY_ENGINE.md                  ← deterministic state & branching spec (GOVERNED, operational)
+  CHARACTER_RUNTIME_CARDS.md       ← writing-context card format (GOVERNED, operational)
+docs/research/
+  VISUAL_REFERENCE_PROTOCOL.md     ← how local visual references are studied (GOVERNED)
+docs/production/
+  RESEARCH_INDEX.md                ← per-file research reliability index (GOVERNED)
+  READING_LEDGER.md                ← ARCHIVED production record
+  UNRESOLVED_DECISIONS.md          ← open questions for Mert (GOVERNED)
+templates/                         ← 12 blank creative-brief templates (blank by design)
+content/part-1/prologue/           ← S1, S2 (FROZEN)
+reference/                         ← visual-reference workspace; raw-private/ is gitignored
+ONE PIECE RESEARCH/                ← ARCHIVED research essays — never auto-loaded
 ```
 
-`ONE PIECE RESEARCH/` is source material — leave it untouched unless Mert requests changes.
+## Validation checks
+
+Run before committing any documentation change:
+
+- `git status` — no unintended files.
+- Frozen files untouched: `git diff --stat main -- content/ docs/director/briefs/PROLOGUE_ARC_BRIEF.md`
+  shows nothing (during Phase 1 repair work).
+- Every path named in this file exists: check with `ls` / `Glob`.
+- Every active document header carries exactly one status.
+- No BLANK/SEALED field has been given content without a dated Mert ruling recorded beside it.

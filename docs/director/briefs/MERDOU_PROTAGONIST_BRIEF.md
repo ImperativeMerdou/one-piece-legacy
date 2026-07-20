@@ -156,7 +156,8 @@ the official palette).*
   heirloom passed every second generation as the protector of the family** — one of the dynasty's
   **two Mythical Zoans** (with Aslan's Griffin), **gifted by an unknown ultra-powerful person from the
   Void Century** (SEALED; sprinkle-cap applies). Full design:
-  `briefs/BULL_OF_HEAVEN_DEVIL_FRUIT_BRIEF.md` (UNDER_REVIEW).
+  `briefs/BULL_OF_HEAVEN_DEVIL_FRUIT_BRIEF.md` (LOCKED — cross-reference corrected in Phase 1
+  reset, 2026-07-20; previously stale as "UNDER_REVIEW").
 - **Dormant Conqueror's Haki** (shared with Aslan).
 - **Haki-first fighting philosophy** — the fruit amplifies the body; Haki does the talking (the Kaido
   precedent, per Mert's direction).
@@ -179,7 +180,8 @@ and simple.
   he would conquer the world. Multiple scraps became a **legendary pit rivalry the whole island took
   sides on** — then friendship. **Half-Lunarian** (smaller wings; somewhat smaller than King), cool
   and badass where Merdou is warm and explosive; **the second Supernova crewmate** (confirmed). Full
-  design: `briefs/ASHREN_CREW_BRIEF.md` (UNDER_REVIEW).
+  design: `briefs/ASHREN_CREW_BRIEF.md` (LOCKED — cross-reference corrected in Phase 1 reset,
+  2026-07-20; previously stale as "UNDER_REVIEW").
 - **Aslan — "Regal Lion"** *(an Oda-grade pun: Aslan is Turkish for lion)* — little brother, 18;
   independent Supernova-trajectory captain; Griffin Mythical Zoan; dormant Conqueror's. Open-minded,
   super ambitious. Elegant, theatric named attacks. Unseen for seven years.

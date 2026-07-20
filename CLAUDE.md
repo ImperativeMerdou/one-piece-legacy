@@ -145,6 +145,7 @@ docs/production/
   UNRESOLVED_DECISIONS.md          ← open questions for Mert (GOVERNED)
 templates/                         ← 12 blank creative-brief templates (blank by design)
 content/part-1/prologue/           ← rebuilt prologue: E1–E8 + sting, with .state.yaml sidecars
+play/prologue.html                 ← offline playable build (double-click; no network, no AI)
 reference/                         ← visual-reference workspace; raw-private/ is gitignored
 ONE PIECE RESEARCH/                ← ARCHIVED research essays — never auto-loaded
 ```

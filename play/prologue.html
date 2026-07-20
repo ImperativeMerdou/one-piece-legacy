@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ONE PIECE: LEGACY — Episode One: The Coin Lands</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { margin:0; background:#101418; color:#e8e4da; font-family: Georgia, 'Times New Roman', serif; }
+  #wrap { max-width: 680px; margin: 0 auto; padding: 28px 18px 80px; }
+  h1 { font-size: 1.05rem; letter-spacing:.18em; color:#d8b64a; text-transform:uppercase; text-align:center; margin: 8px 0 2px;}
+  #scenetitle { text-align:center; color:#9db4c0; font-size:.85rem; letter-spacing:.12em; text-transform:uppercase; margin-bottom:22px;}
+  .card { text-align:center; font-weight:bold; letter-spacing:.08em; color:#b9c7d1; border-top:1px solid #2c3640; border-bottom:1px solid #2c3640; padding:10px 4px; margin:18px 0; font-size:.92rem;}
+  p { line-height:1.62; font-size:1.04rem; margin: 0 0 1em; }
+  .narr { font-style: italic; color:#c9bd9a; text-align:center; }
+  .choicehead { text-align:center; color:#d8b64a; margin:26px 0 12px; letter-spacing:.06em; font-weight:bold;}
+  button.opt { display:block; width:100%; text-align:left; margin:10px 0; padding:13px 15px; background:#1a2129; color:#e8e4da; border:1px solid #33404d; border-radius:8px; font-family:inherit; font-size:1rem; cursor:pointer; line-height:1.45;}
+  button.opt:hover { background:#232d38; border-color:#d8b64a; }
+  button.opt .sub { display:block; font-style:italic; color:#93a4b2; font-size:.9rem; margin-top:4px;}
+  #restart { margin-top:30px; background:none; border:1px solid #33404d; color:#93a4b2; padding:8px 14px; border-radius:8px; cursor:pointer; font-family:inherit;}
+  .endstate { background:#161c22; border:1px solid #2c3640; border-radius:8px; padding:14px 16px; font-size:.92rem; color:#aebbc6; margin-top:24px;}
+  .tbc { text-align:center; font-weight:bold; letter-spacing:.2em; color:#d8b64a; margin-top:30px; font-size:1.1rem;}
+</style>
+</head>
+<body>
+<div id="wrap">
+  <h1>One Piece: Legacy</h1>
+  <div id="scenetitle"></div>
+  <div id="story"></div>
+  <div id="choices"></div>
+</div>
+<script>
+"use strict";
+// Deterministic offline player — no network, no AI, state below.
+let S;
+function reset(){ S = { c1:0,c2:0,c3:0,c4:0,c5:0,c6:0,c7:0,c8:0,
+  purse:false, marnDebt:false, worn:false, sharp:false, allin:false, fixExposed:false,
+  fixNamed:false, kettleThreat:false, joro:"", ribs:false, arm:false, broken:false,
+  strain:false, whisper:false, sanctionBroken:false, cells:false, debtBrand:false,
+  exposure:"none", promise:"", mark:"", gupsFate:"", boatNamed:false, refusedFire:false }; }
+const $=id=>document.getElementById(id);
+function P(t){ return "<p>"+t+"</p>"; }
+function N(t){ return "<p class='narr'>"+t+"</p>"; }
+function CARD(t){ return "<div class='card'>"+t+"</div>"; }
+function show(title, html, opts){
+  $("scenetitle").textContent=title;
+  $("story").innerHTML=html;
+  const c=$("choices"); c.innerHTML="";
+  if(opts && opts.head){ const h=document.createElement("div"); h.className="choicehead"; h.textContent=opts.head; c.appendChild(h);}
+  (opts?opts.list:[]).forEach(o=>{
+    const b=document.createElement("button"); b.className="opt";
+    b.innerHTML=o.label+(o.sub?"<span class='sub'>"+o.sub+"</span>":"");
+    b.onclick=()=>{o.go();window.scrollTo(0,0);}; c.appendChild(b);
+  });
+  window.scrollTo(0,0);
+}
+
+/* ---------------- E1 ---------------- */
+function E1(){
+  let h = CARD("NORTH BLUE — COIN TOSS ISLAND. THE PIT, GULLWHARF. PIT NIGHT.")
+  +P("The Pit is packed, and Merdou is losing.")
+  +P("Not to anybody good. To Brakko the Anvil — chain-wrapped fists, four teeth, a man who has never had two thoughts in the same evening. Brakko hits Merdou in the face. Merdou takes it, because he is not looking at Brakko. He is looking at a dye-girl from Petal Row, third row up, and waving.")
+  +P("“OI! MISS! DO YOU LIKE FIGHTERS OR WINNERS? I CAN BE EITHER!”")
+  +P("Brakko hits him again. The whiskey in Merdou's fist slops over his knuckles.")
+  +P("“Baldy's down two rounds!” the announcer yells from the rail. “Odds are moving! Odds are — wait, nobody's betting on Baldy. Odds are staying exactly where they are!”")
+  +P("In the second row, a grandmother with a coin purse in her lap counts out five coppers, thinks better of it, and puts three back. Two bookies fight over her business anyway. Behind them the odds board shows BRAKKO in fat chalk and, under CHALLENGER, someone has just written <i>why</i>.")
+  +P("Pit night at Gullwharf. Half the district is here — dye-girls off shift, wharfmen still in their boots, kids who are absolutely not allowed to be here watching through the fence slats and doing the commentary themselves.")
+  +P("“THE MAGNIFICENT MERDOU,” Merdou roars at the crowd, “IS PACING HIMSELF!”")
+  +P("At the rail, a lean man in a high-collared coat sips his drink. Two stray cats sit on the rail beside him like they bought tickets.")
+  +P("“You're losing to Brakko,” Ashren says.")
+  +P("“I'm WARMING UP.”")
+  +P("“You said that last month. Then you slept in the ring.”")
+  +P("“THAT WAS TRAINING.”")
+  +P("Up in the owner's box, a goon lowers a spyglass and whispers to the biggest thing on the island. Yuri Gups — elephant Mink, small spectacles, silk cloth in one hand — stops dabbing at his ledger.")
+  +P("“Sober?” says Gups. “You're certain. Tonight of all nights.”")
+  +P("“Mostly sober, General.”")
+  +P("“Cancel my exhibition.” He draws one neat line through a page. “The old injury is acting up.”")
+  +P("The two goons look at each other and know better than to have faces about it.")
+  +P("Down in the sand, Brakko swings, and this time Merdou leans back and the fist takes the whiskey glass clean out of his hand. It breaks on the pit wall. The crowd goes “ohhhh.” The dye-girl laughs.")
+  +P("Merdou looks at his empty hand.")
+  +P("“That was FULL,” he says.")
+  +P("“Uh,” says Brakko.")
+  +P("“That was a FULL GLASS, you CHAIN-HANDED COW.”")
+  +P("Brakko backs up one step. The grandmother in the second row stops counting her coins. The bookies stop shouting numbers. Everyone on Coin Toss Island knows what an angry Archon sounds like, even if nobody knows what an Archon is.")
+  +P("And Brakko — because he has never had two thoughts in the same evening — reaches into his waistband wrap and pulls out a foot of sharpened steel. In a fists-only pit. The boos start at the top bleachers and come down row by row. One of the fence-slat kids boos loudest of all.")
+  +P("Merdou rolls his neck. Sets his feet in the sand.")
+  +P("“UHUHUHU!! Now THAT'S entertainment.”");
+  show("E1 — Baldy the Magnificent", h, { head:"⟨ CHOICE 1 — The Pit holds its breath. ⟩", list:[
+    {label:"1 — “You wanted a show?! FINE! EVERYBODY WATCH!”", sub:"Take the steel off him and give Coin Toss a comeback they'll sing on the Steps. (Ashren bet against you. He can cry about it.)",
+      go:()=>{S.c1=1;E2();}},
+    {label:"2 — End it. One hit. Ugly.", sub:"Steel in a fists-only pit. Teach every goon in Gups's pay what that costs. No show. Just the lesson.",
+      go:()=>{S.c1=2;E2();}},
+    {label:"3 — “Ashren! What were the odds on Brakko?!”", sub:"Ashren bet on the nobody. Eat one more hit, go down loud, stay down. Walk out broke-famous and secretly rich.",
+      go:()=>{S.c1=3;S.purse=true;E2();}}
+  ]});
+}
+
+/* ---------------- E2 ---------------- */
+function E2(){
+  let h = CARD("GULLWHARF. THE COPPER KETTLE. LATER THAT NIGHT.");
+  if(S.c1===1){ h+=P("The Kettle is re-fighting the fight. A fat fisherman plays Brakko and keeps getting thrown onto a table by committee, and the table has already lost two legs. Merdou enters to cheering, arms up, shirt more open than usual.")
+    +P("“WHO SAW IT?! EVERYONE?! GOOD!”")
+    +P("Ashren follows with his empty betting slip held out like a small dead animal. “Somebody buy me a drink. My best friend just cost me forty thousand berries by winning.”"); }
+  if(S.c1===2){ h+=P("The Kettle is quieter than usual. Word came down the Steps ahead of them. When Merdou pushes the door open, three conversations restart too loudly, and a stool empties on his way to the bar without anyone visibly moving.")
+    +P("“...The hell's wrong with everyone tonight?” says Merdou.")
+    +P("“You broke Brakko's arm in one hit and then asked the crowd if anyone else brought a knife,” says Ashren. “People found it memorable.”"); }
+  if(S.c1===3){ h+=P("Merdou enters holding his own jaw and forty thousand berries in a sack, which is hard to do angrily, but he manages.")
+    +P("“Tell NO ONE.”")
+    +P("“You went down like a sack of turnips,” Ashren says, delighted. “The Persuader's professional opinion? Best acting of your career. Nobody suspects a thing.”")
+    +P("“I HATE how good the money feels.”"); }
+  h+=P("The Copper Kettle runs hot on pit nights. Stew steam, wet wool, an accordion in the corner losing a fight with a step-shanty. Auntie Marn works the taps one-armed while breaking up a card game with the other.")
+  +P("Merdou is behind her bar in under a minute.")
+  +P("Nobody invited him. Nobody stops him. The stove is half his size and surrenders immediately.")
+  +P("“You put the marrow in FIRST,” he says, solemn, sleeves up. “Always the marrow first.”")
+  +P("“You put your ass on a stool—” Auntie Marn takes the spoon, tastes it, and stops arguing. Same ending as every night.")
+  +P("At the bar, Ashren has the collar up and the low voice on. The new barmaid leans in. One of his cats chooses this moment to climb him like a tree and sit on his head.")
+  +P("“You know,” Ashren says, cat on head, absolutely committed, “on an island this cold, a man learns to appreciate warm—”")
+  +P("A spark snaps off his collar. Then another. A little curl of smoke comes up from his shoulder like he's a doused campfire with opinions.")
+  +P("“...Is your coat on fire?” says the barmaid.")
+  +P("“No.” <i>snap</i> “This is unrelated. Continue.”")
+  +P("Merdou's laugh rattles the pans. “UHUHUHU!!”")
+  +P("Then the door opens, and the room does a small quiet thing that Merdou notices because the accordion misses a note. Two men in good coats. Too good. They stop at the corner table, where Joro the fisherman has been making one small beer last three hours.")
+  +P("“Pit-markers, Joro. The Anvil was a sure thing, you said.” Papers on the table. “The nets, then. And the winter lines.”")
+  +P("“That's my whole season,” Joro says. “That's — the odds moved AFTER I—”")
+  +P("“Odds move.” The collector doesn't shout. Collectors here never have to. “Dawn, then. You know which boat.”")
+  +P("Nobody in the Kettle says the boat's name. The accordion keeps playing. Auntie Marn's pour stops, just for a second, and starts again.")
+  +P("Behind the bar, Merdou's spoon has gone still in the pot. Ashren is watching the spoon.");
+  show("E2 — The Copper Kettle", h, { head:"⟨ CHOICE 2 — The collectors reach for the nets. ⟩", list:[
+    {label:"1 — Slam tonight's purse on the table.", sub:S.purse?"“Markers are paid. Stew's in ten minutes. Sit down or get out.”":"You're broke tonight — Auntie Marn fronts it without being asked. Now you owe HER, and she collects in favors.",
+      go:()=>{S.c2=1;S.joro="saved"; if(!S.purse)S.marnDebt=true; E3();}},
+    {label:"2 — Stand up. Loud. “SAY THE PART ABOUT THE ODDS AGAIN.”", sub:"Name the fix in front of the whole Kettle. Everyone knows. Nobody's said it. Say it.",
+      go:()=>{S.c2=2;S.joro="cause";S.fixNamed=true;E3();}},
+    {label:"3 — Catch Joro's eye. Two fingers toward the back door.", sub:"The Ferry sails at dawn. Dawn is a time. Times can be missed. Tell him how — quietly.",
+      go:()=>{S.c2=3;S.joro="ran";S.kettleThreat=true;E3();}}
+  ]});
+}
+
+/* ---------------- E3 ---------------- */
+function E3(){
+  let h = CARD("THE SIX HUNDRED STEPS. VERY LATE. VERY DRUNK.")
+  +P("The Steps go up forever and the two of them are taking the scenic route, which is the same route, but slower and with more arguing.")
+  +P("“Six hundred steps,” Merdou announces, “and not ONE of them even. This island was built by drunks.”")
+  +P("“It was built by a legion.”")
+  +P("“Drunk legion.”")
+  +P("They climb. Somewhere below, Gullwharf is putting itself to bed. A dog has been following Ashren since the Kettle. It is carrying his glove and he has stopped fighting it.")
+  +P("“So,” Ashren says. “Joro.”")
+  +P("“What about him.”")
+  +P("“You did something about it.” A beat. “You haven't done something about anything in seven years.”")
+  +P("“I do PLENTY.”")
+  +P("“You drink, you brawl, you fail with women in ways I collect like seashells—”")
+  +P("“UHUHUHU—”")
+  +P("“—and every man in that tavern is more of a coward than you, and none of them are wasting anything, because none of them have anything to waste.” Ashren isn't smiling now. “You're the only man on this island who could've been something, and you've spent seven years making sure nobody finds out. And that's the one joke I've never once found funny.”")
+  +P("“Careful, bird.”")
+  +P("“Or WHAT, Merdou? What's the punishment? You'll be a disappointment AT me? Get in line behind—”")
+  +P("“I KILLED MY FATHER.”")
+  +P("The Steps are very quiet.")
+  +P("The dog puts the glove down.")
+  +P("“Seven years ago,” Merdou says. Not loud now. Loud is gone. “You want to know what I was. I was the son who wasn't good enough. And I killed him, and I took what I took, and I ran here, and I drank. That's the something I did. That's the last something I did.”")
+  +P("Ashren looks at him for a long time.")
+  +P("Then he takes off his coat.")
+  +P("It takes Merdou's whiskey-soaked brain a second to understand what he's looking at, because what he's looking at is wings. Opened all the way for the first time since he's known him — dark, and scarred along one edge, and big enough to catch the wind that comes up the cliff.")
+  +P("“They burned my whole race,” Ashren says. “The World Government. Took my parent. I was a kid. I have been hiding in coats my entire life, on an island where nobody looks up.” He flexes the wings once, like a fist unclenching. “You told me your worst thing. There's mine. And here's the part I've never said drunk or sober: I'm going to bring them back. The Lunarians. That's my something. I've been waiting seven years to start it, and I've been waiting on YOU, you enormous bald disaster, because I watched a drunk man laugh through the worst beating I ever gave anyone, and I thought: that one. That one's got a king in him somewhere, if he'd stop drowning it.”")
+  +P("The wind comes up the Steps. The dog sneezes.")
+  +P("“...Fuck it,” Merdou says.")
+  +P("“Fuck it?”")
+  +P("“FUCK IT. I'm done rotting. You're done hiding. We do something with our lives. Starting—” he checks the sky, finds dawn distressingly close, “—starting after we sleep. Then we do something. Something BIG.”")
+  +P("“The champion,” Ashren says. “The pits. The Toll. All of it — that's the something. It's been in front of us the whole time.”")
+  +P("“Gups.” Merdou says the name like a toast. “UHUHUHU. Oh, he is going to HATE this.”")
+  +P("Ashren folds the wings away, and for once his grin isn't the performed one.")
+  +P("“To the tribe, then,” he says, and holds out the bottle. “And whatever you're about to swear to it.”");
+  show("E3 — Fuck It", h, { head:"⟨ CHOICE 3 — What does Merdou swear? ⟩", list:[
+    {label:"1 — “I'll help you bring them back. All of it. My hands, your plan. Sworn.”", sub:"A promise is a promise. This game collects them.",
+      go:()=>{S.c3=1;S.promise="the tribe, sworn whole";E4();}},
+    {label:"2 — “The dead don't come back, bird. But the ones still breathing need ground to stand on — and I'll get you that ground.”", sub:"The hard truth, and a different oath under it. He may hate you tonight for it.",
+      go:()=>{S.c3=2;S.promise="ground for the living";E4();}},
+    {label:"3 — “Help me take the throne of the world — and your people get an island out of it. That's the deal. Shake it.”", sub:"Not charity. A contract. Two dreams, one handshake.",
+      go:()=>{S.c3=3;S.promise="an island for the tribe — the contract";E4();}}
+  ]});
+}
+/* ---------------- E4 ---------------- */
+function E4(){
+  let h = CARD("THE CROWN. NEXT MORNING. HUNGOVER.")
+  +P("The arena crowns the mountain, and the Steps below it are lined with portraits: YURI THE UNBEATEN, trunk raised like a saluting arm, ELEVEN YEARS CHAMPION, PROTECTOR OF THE CROWN.")
+  +P("Under the biggest portrait, a bald man is shouting at a building.")
+  +P("“GUPS!! YURI GUPS!! GET YOUR LEDGERS OUT HERE!”")
+  +P("“He can't hear you,” Ashren says, sitting on a rail with a cat. “He's an elephant, not a window.”")
+  +P("“I'M BEING LOUD FOR THE PEOPLE.”")
+  +(S.fixNamed
+    ? P("The people are already there. Word of last night's shout in the Kettle went up the Steps faster than they did. Market baskets set down. Dye-stained aprons. Somebody has chalked THE ODDS MOVED AFTER on a wall, and somebody official has half scrubbed it off.")
+    : P("The people are, in fact, gathering. Market baskets set down. Dye-stained aprons. Someone sends a kid running up toward the arena gate, and the kid is grinning."))
+  +(S.kettleThreat ? P("Down the Steps, two men in good coats are standing across from the Copper Kettle, not buying anything. Merdou sees them. They see him see them.") : "")
+  +P("“CHAMPION OF THE CROWN!” Merdou spreads his arms at the portraits. “ELEVEN YEARS UNBEATEN! You know what I did last night, Gups?! I got SOBER! First morning in seven years! You know what that's for?!”")
+  +P("The gate opens. It takes a while. Gates do, for elephants.")
+  +P("Yuri Gups comes out into the morning sun in a coat worth more than a fishing boat, spectacles flashing, flanked by six goons and one Marine — Sergeant Hale, pressed uniform, honest chin, the kind of man who irons his socks.")
+  +P("“Citizens.” Gups's voice is a warm rolled baritone, a voice for laying wreaths. “And Merdou. Our Pit's most... beloved comedian.”")
+  +P("“Fight me.”")
+  +P("The crowd noise drops away all at once.")
+  +P("“You have ducked me for six years,” Merdou says, and now he isn't shouting, which somehow carries further. “Me and the bird both. You made a match, and cancelled it. Made another, cancelled it. The injury. The weather. The ledger audit. The OTHER injury—”")
+  +P("“The gout,” someone in the crowd says helpfully.")
+  +P("“THE GOUT,” Merdou agrees. “Eleven years unbeaten! So beat me. Champion's honor. Right here works.”")
+  +P("Sergeant Hale steps forward, hand up. “That's enough. General Gups's schedule protects this island. Do you know what the sea lanes around this port would look like without his name on it? Safest harbor in the North Blue. Show some respect.”")
+  +P("“He fixes your fights, sergeant.”")
+  +P("“That,” says Hale, with the calm of a man who has never once considered it, “is slander.”")
+  +P("Gups dabs his forehead with the silk. And then — because two hundred people are watching, and because the coward has spent eleven years building the one cage even he can't duck out of — he smiles.")
+  +P("“Very well.”")
+  +P("Rumble through the crowd like a barrel down the Steps.")
+  +P("“One week from today,” Gups says, warm as a wreath. “A sanctioned championship challenge — the full Colosseum, my referee, the champion's rules, the medical weigh-in, all of it proper. This island deserves a SPECTACLE, not a street brawl.” He looks down at Merdou over his spectacles, and for one second the wreath-warmth drops away, and underneath it is an auditor's stare that has never lost anything it counted. “You wish to be part of my island's story, boy. Very well. I have written better men than you into its margins.”")
+  +P("He turns in a slow gray circle and goes back through his gate.")
+  +P("“One week,” Ashren says. The cat on his shoulder is watching Merdou too. “His arena. His referee. His rules. His 'medical' weigh-in.”")
+  +P("“UHUHUHU!! One week.” Merdou cracks his knuckles, then looks around for a pump to wash his hands. “So. How do we spend it?”");
+  show("E4 — The Unbeaten", h, { head:"⟨ CHOICE 4 — One week to the bell. ⟩", list:[
+    {label:"1 — “You train me, bird. Sober. All seven days. The whole camp.”", sub:"Sharp for the first time in seven years. But a training camp watches nothing — and the collectors have a week and a grudge.",
+      go:()=>{S.c4=1;S.sharp=true;E5();}},
+    {label:"2 — “We spend the week in their pockets. Ledgers. The referee. The 'medical'. Break the fix before fight day.”", sub:"Walk in tired — but walk in clean, with the crowd knowing exactly what he tried.",
+      go:()=>{S.c4=2;S.worn=true;S.fixExposed=true;E5();}},
+    {label:"3 — “Everything we own. On US. At his own betting window.”", sub:"If the house has to pay out on its own champion losing, the house burns. Gups can't afford a single crooked, traceable move — and if you lose, the Ferry has two new seats.",
+      go:()=>{S.c4=3;S.allin=true;E5();}}
+  ]});
+}
+
+/* ---------------- E5 ---------------- */
+function E5(){
+  let h = CARD("THE COLOSSEUM. FIGHT DAY. FULL HOUSE — ONE WEEK LATER.");
+  if(S.c4===1) h+=P("Seven days of Ashren's camp and Merdou walks the fighters' tunnel feeling like a weapon someone finally cleaned. He has hated every single day of it. Loudly.");
+  if(S.c4===2) h+=P("Seven days in ledgers and back rooms and Merdou walks the tunnel with bags under his eyes and a folded page of Priya's handwriting inside his shirt like a knife.");
+  if(S.c4===3) h+=P("The betting window took everything they own and the whole island knows it. Merdou walks the tunnel broke, famous, and delighted with himself.");
+  h+=P("The Colosseum is the old Legion assembly with eleven years of gold paint on it. Forty rows. Petal-dye banners. The great bronze bell hanging over the champion's gate. The floor is a copper-inlaid mosaic — waves and coins and a trunk-raised champion — polished to a shine.")
+  +P("At the mouth of the sand, an official waits with a silver cup on a cushion.")
+  +P("“The ceremonial waters,” he announces. “Every challenger drinks. Champion's rules.”")
+  +P("Merdou looks into the cup.")
+  +P("Merdou looks closer into the cup.")
+  +P("“There's a THUMBPRINT on the rim,” he says, with more horror than he showed the knife. “This cup is FILTHY. Who WASHES these?! Do you wash ANYTHING?! Get it away from me before I catch whatever the last man had.”")
+  +P("The official's smile dies slowly, in stages. Up in the champion's box, something very large pinches the bridge of its trunk.")
+  +(S.fixExposed ? P("It wouldn't have mattered — the folded page in Merdou's shirt has the “ceremonial waters” itemized under <i>fight-day expenses</i>, right beneath the referee's bonus. Some things you break with a week's digging. Some things break on a dirty cup.") : "")
+  +P("“FIRST,” the announcer bellows, “THE UNDERCARD GAUNTLET! CHAMPION'S RULES! THE CHALLENGERS WILL FACE THE CROWN'S FINEST BEFORE EARNING THE CHAMPION!”")
+  +P("The Crown's finest file out. Brakko and five friends who make the sand look small."+(S.allin?" They fight nervous — half their own pay is riding on the champion, and the challengers walked in like men who know it.":""))
+  +P("Ashren hands his coat to a cat.")
+  +P("“The Persuader works alone on the left,” he says, unhooking the flail. “Try not to fall on me.”")
+  +P("The gauntlet is six men who were promised an easy afternoon. The flail starts counting.")
+  +P("“METRONOME.” One-two. One-two. The first goon's guard comes apart at the seams like wet paper. The crowd, which came for a fix and is getting a fight, starts making a very different sound.")
+  +P("But six is six, and champion's rules mean the referee is blind on one side, and somewhere in the third exchange the afternoon stops being easy for everyone. There is a man with a hammer. There is a man with a net weighted with hooks — pit-illegal for twenty years, invisible to today's referee. The biggest of them hasn't moved yet. He's waiting, on the far side, cracking knuckles in rhythm with the crowd, and the referee keeps steering the fight toward him.")
+  +P("“That one's mine,” Merdou and Ashren say at the same time, and then look at each other.");
+  show("E5 — Champion's Rules", h, { head:"⟨ CHOICE 5 — The gauntlet's worst is waiting. Who takes him? ⟩", list:[
+    {label:"1 — “MINE. Wash your hands when it's your turn.”", sub:"Merdou eats the worst of it — and whatever it costs him, he carries into the champion's fight.",
+      go:()=>{S.c5=1; if(S.worn){E5b();}else{S.ribs=true;E6();}}},
+    {label:"2 — “Yours, bird. Show them what patience looks like.”", sub:"Ashren takes him — handicapped, no flame, a hooked net in play, and forty rows watching.",
+      go:()=>{S.c5=2; if(S.worn){E5b();}else{S.strain=true;S.whisper=true;E6();}}},
+    {label:"3 — “Screw the rules. TOGETHER.”", sub:"Break sanction, fight as a pair — and turn the championship into something no referee owns.",
+      go:()=>{S.c5=3;S.sanctionBroken=true;E6();}}
+  ]});
+}
+/* E5b — the worn-week crisis (loss branch gate) */
+function E5b(){
+  let h = P("A week of back rooms instead of sleep, and it shows. The hooked net takes an arm. The hammer finds ribs. The big one is fresh and the sand is not level and the referee has stopped pretending.")
+  +P("Merdou is on one knee. The bell over the champion's gate hasn't rung, because the man under it is enjoying this.")
+  +P("Ashren, across the sand, pinned by two goons and shouting — too much, too fast, furious: “Get UP, you enormous— you STOOD UP for FUN for seven YEARS—”");
+  show("E5 — Champion's Rules", h, { head:"⟨ The sand is very close. What's left? ⟩", list:[
+    {label:"1 — Get up. Whatever it costs. GET. UP.", sub:"Spend the body now, pay all week later: broken ribs, a ruined arm — but the gauntlet ends standing.",
+      go:()=>{S.ribs=true;S.arm=true;E6();}},
+    {label:"2 — Go down.", sub:"The sand comes up. The bell doesn't ring for you. Some doors only open from the bottom of this island.",
+      go:()=>{S.cells=true;S.debtBrand=true; if(S.allin){/* both staked */} E6();}}
+  ]});
+}
+
+/* ---------------- E6 ---------------- */
+function E6(){
+  let h = CARD("THE COLOSSEUM. THE MAIN EVENT.");
+  if(S.cells){ h+=P("You wake below the arena first — in the cells that don't appear on any tour, iron on your wrist and a brand-tag on the iron: a debt number. Quiet men on the benches. One of them nods at the tag. “Dawn boat,” he says, like the weather.")
+    +P("But the crowd was promised a champion's fight, and Gups prefers his enemies pre-ruined. They bring you up on his schedule, branded, to his sand.")}
+  if(!S.sanctionBroken){ h+=P("The bell rings once, flat and enormous, and the champion's gate opens. Yuri Gups enters his arena the way a magistrate enters a courtroom he built. Robe off. Folded by an attendant. Spectacles handed down. The crowd has cheered this entrance for eleven years and starts to now — and thins out halfway, because today the man across the sand didn't drink the water."); }
+  else { h+=P("There is no bell and no robe ceremony, because the challengers are already on the sand and the crowd is already standing. Gups comes through the gate fast, and angry, and enormous, and for the first time in eleven years nobody introduces him."); }
+  h+=P("“ELEVEN YEARS,” Gups says, rolling his shoulders, and the warm wreath-voice fills the bowl without effort. “I have given this island eleven years of safety. Eleven years of glory. Do you know what a champion IS, boy? A champion is a WALL. And you—” the trunk levels at Merdou, “—are a crack looking for one.”")
+  +P("“You talk,” Merdou says, “like a man who's never been hit.”");
+  if(!S.sanctionBroken){ h+=P("<b>THE SHOWMAN.</b> Gups fights like a parade. Big sweeps, big poses, playing the crowd — and the floor keeps helping him. Merdou plants a foot for DEAD LIFT and the mosaic under it <i>bites</i> — a snap of lightning up through his boot, out of nowhere, no wind-up, no tell.")
+    +P("Again. A third time. Always when the referee is looking elsewhere."+(S.fixExposed?" Twice the referee starts toward it — and stops, because forty rows now know his name and his bonus, and he calls it clean by the book instead. Small victories. They add up.":""))
+    +P("“The FLOOR,” Ashren shouts from the rail, furious, delighted, already working it out. “The mosaic — the copper's not decoration, it's WIRED. The whole arena is his conductor! He built his own cage bars, the meticulous son of a—”")
+    +P("“So I'm fighting the BUILDING?!”")
+    +P("“Stay off the copper! The stone rows are dead!”")
+    +P("Merdou stops chasing. Reads the mosaic — waves, coins, the trunk-raised champion — and starts stepping ONLY on stone, hopping row to row like a man crossing a river, forty rows watching the challenger apparently dance.")
+    +P("“He's MOCKING him,” someone says, and laughs. First laugh the champion's ever shared a sand with. Gups's ears go back.")
+    +P("“MANNERS!!” The open palm cracks across the elephant's face — the first unscripted hit of the fight — and every head in the top row comes up at the sound of it."); }
+  else { h+=P("No script survives an unsanctioned brawl. Ashren finds the wiring in the first exchange — “The FLOOR, the copper's WIRED, stay on stone!” — and the fight goes ugly and honest at the same time."); }
+  h+=P("<b>THE MONSTER.</b> Everything changes. Gups spits, drops the parade, and goes black to the elbows — real Armament, sudden and total — and the next sweep of ivory doesn't play to any crowd.")
+  +P("“IVORY LAW.”")
+  +P("The tusks come through a stone bench like it's bread. Merdou takes one graze and it opens his shoulder"+(S.ribs?" — and the ribs from the gauntlet scream under it":"")+". This is the truth the fix was hiding, and it's worse than the lie: the coward never needed the cage. He was always a monster. He just never wanted to <i>pay</i> for anything.")
+  +P("“TRUNK GAVEL.”")
+  +P("Sand where Merdou stood. The gavel-crater is a foot deep.")
+  +P("They hurt him back. That's the horror on the other side of it — Ashren's flail finding the tender spots behind the jaw, Merdou walking through a sweep he shouldn't walk through to land IRON TOAST between the eyes — and every time they hurt him, Gups gets less magnificent and more frantic, because pain is a language the record never let him learn.")
+  +P("And frantic, he remembers his floor.")
+  +P("<b>THE PANIC KING.</b> “THUNDER TOLL.”")
+  +P("He puts BOTH tusks into the mosaic and the whole floor goes white. Not aimed. Not at Merdou. Everywhere. The referee goes down twitching. Two of his own goons go down. The crowd barriers start to smoke, and the crowd — forty rows of his own island — finally sees the champion clearly: a huge gray shape standing in the middle of his own burning floor, eyes small, done pretending.")
+  +P("“I AM THE WALL,” Gups bellows, to no one, to everyone, “I KEEP YOU SAFE, I AM WHAT KEEPS THE STORY GOOD—”")
+  +P("He backs toward the champion's gate — and grips the bell-chain.")
+  +P("“He's charging the BELL,” Ashren says, and his voice has gone strange and flat, because behind the champion's gate, through the opened dark, the cells are visible now: the iron rows, the quiet men, the brand-tags, the dawn boat's manifest nailed to a post. The something under the island, looking back at the crowd for the first time.")
+  +P("Ashren stops talking entirely. Then starts again, low and too fast, a different man: “He sells them. He SELLS them, that's the Ferry, that's a manifest, he has been running a slave dock under a SPORTS ARENA for eleven—”")
+  +P("“JUDGMENT BELL.”")
+  +P("The great bronze bell screams white. The arc leaps bell to tusks — and Gups aims it, finally and deliberately, not at Merdou. At the stands. At the forty rows that laughed.")
+  +P("The choice is a half-second wide.");
+  show("E6 — Judgment Bell", h, { head:"⟨ CHOICE 6 — The Bell is coming down on the crowd. ⟩", list:[
+    {label:"1 — Take it. All of it. Body in the way, secrets intact.", sub:"The pit-fighter's answer. What breaks, breaks — and it will break.",
+      go:()=>{S.c6=1;S.arm=true;S.broken=true;E7();}},
+    {label:"2 — The horns. Now.", sub:"Nothing human catches this — so stop being only human. Forty rows will see what rises off Merdou's brow. There is no unseeing it.",
+      go:()=>{S.c6=2;S.exposure="merdou";E7();}},
+    {label:"3 — Ashren, already moving: “Catch him. I'll light the sky.”", sub:"Let him burn — his choice, his people's fire, his last secret. Accept it.",
+      go:()=>{S.c6=3;S.exposure="ashren";E7();}}
+  ]});
+}
+
+/* ---------------- E7 ---------------- */
+function E7(){
+  let h = CARD("THE COLOSSEUM. AFTERWARD.");
+  if(S.c6===1) h+=P("It ends with a man. Just a man — shirt gone, arm hanging wrong, ribs made of bad news — walking through the last of the lightning because someone had to, catching the falling barrier on his back, and then walking THROUGH the panicking champion's guard with the one thing he saved all week.")+P("“CLOSING TIME!!”")+P("The haymaker lands like a dropped mast. Gups goes down through his own mosaic, and the circuit dies with a sound like a kettle coming off the boil.");
+  if(S.c6===2) h+=P("It ends with horns.")+P("They rise off Merdou's brow like something surfacing — black, curved, WRONG for a human head and exactly right for the belt he's worn for seven years — and the man beneath them catches the Bell's arc on them, walks it down through his boots into the sand, and puts his fist through the champion's guard.")+P("“CLOSING TIME!!”")+P("Gups goes down. Forty rows have gone completely silent, every face asking the same question, and the question has horns.");
+  if(S.c6===3) h+=P("It ends with fire.")+P("Ashren opens his wings in front of forty rows and BURNS — a wall of white-orange flame that swallows the Bell's arc whole, a shape out of dead history hanging over the sand — and behind that light, Merdou crosses the arena and finishes it.")+P("“CLOSING TIME!!”")+P("When the flame drops, the island is looking at a Lunarian. Alive. Real. Standing on their sand next to a grinning bald man, saying nothing, because there is nothing left to hide.");
+  h+=P("The dust settles. The referee crawls for the exit. Somewhere under the champion's gate, the men in the cells are pressed against the bars, watching the manifest post burn where the arc caught it.")
+  +P("And the island — forty rows of dyers and fishermen and grannies and collectors gone very pale — looks down at the two men standing over eleven years of Unbeaten, and waits to be told what happens now.")
+  +P("“Well,” Ashren says. He is bleeding"+(S.c6===3?", smoking — literally,":",")+" and his voice still hasn't come back from the cells. “You wanted to do something big.”");
+  show("E7 — The Island Decides", h, { head:"⟨ CHOICE 7 — The Crown is empty. The island is watching. ⟩", list:[
+    {label:"1 — “BURN THE BOOKS. All of them. And someone go open those cells.”", sub:"Liberation: ledgers on a bonfire, the Ferry contract dead, the pits given back to sport.",
+      go:()=>{S.c7=1;S.mark="LIBERATED";S.gupsFate="put to the island's judgment — his own dawn boat";E7b();}},
+    {label:"2 — “New management. The Toll flows uphill to US now.”", sub:"The machine works. It just changes hands. The island learns what your reign looks like.",
+      go:()=>{S.c7=2;S.mark="OWNED";S.gupsFate="kept alive as an employee of his own arena";E7b();}},
+    {label:"3 — “It's YOUR island. That's the whole point. Figure it out. We're leaving.”", sub:"Break the machine, crown no one, and walk. Free, and leaderless, and free.",
+      go:()=>{S.c7=3;S.mark="TOPPLED";S.gupsFate="deposed, alive, and suddenly very small";E7b();}}
+  ]});
+}
+function E7b(){
+  let h="";
+  if(S.c7===1){ h+=P("The bonfire on the arena steps burns all afternoon. Priya's ledgers go in armfuls, and each armful gets its own cheer. Joro's page — "+(S.joro==="ran"?"fetched from the collectors' office":S.joro==="saved"?"brought by Joro himself, grinning":"carried at the front like a flag")+" — goes in last. Below the gate the cells stand open. Sergeant Hale stands at the fire's edge with eleven years of sincerely believed reports coming apart in his head, and doesn't stop anyone.")
+    +P("The grannies reclaim the arena by evening. There is talk of holding the Bloom Haul in it, the way the Legion meant."); }
+  if(S.c7===2){ h+=P("It takes one afternoon to learn how smoothly the machine runs when its operator is afraid of you. Priya presents the ledgers with a bookkeeper's bow, one professional to another. The Toll collects. The Ferry contract sits on the table, unsigned but undead, an asset now.")
+    +P("When they walk into the Copper Kettle that evening, the room goes one notch quieter, and Auntie Marn pours without being asked and without meeting anyone's eyes. Merdou notices. Merdou says nothing."); }
+  if(S.c7===3){ h+=P("They break the machine in the most literal way available: Merdou tears the betting windows out of the wall with DEAD LIFT while Ashren reads the crowd the ledger's greatest hits, loudly, theatrically, with commentary. Then they leave it — all of it — the arena to the grannies, the Toll to nobody, the cells open.")
+    +P("The island watches them start down the Six Hundred Steps and doesn't know whether to cheer or panic. Some of both, in the end."); }
+  show("E7 — The Island Decides", h, { head:"", list:[ {label:"Continue — dawn, the wharf ▸", sub:"", go:()=>E8()} ]});
+}
+
+/* ---------------- E8 ---------------- */
+function E8(){
+  let h = CARD("GULLWHARF. DAWN.")
+  +P("The tide brings in a boat.")
+  +P("A five-man fisher, sails set for harbor, riding clean — and the wharfmen who wade out to meet it come back up the jetty slow, hats in their hands. Five aboard. All dead. Days dead. The sea did it the way the sea does: cold, and water, and time. They'd rigged for home and never finished getting there.")
+  +P("By the time Merdou and Ashren come down the Steps with their gear, half of Gullwharf is standing on the jetty, and the argument has already started.")
+  +P("“Burn it,” an old netmender says. “Dead crew's hull. It's owed to them.”")
+  +P("“It's a sound boat,” says another. “Five-master. Somebody's going to say it: they can't use it, and those two need one.”")
+  +P("Everyone looks at the two of them. "+(S.mark==="LIBERATED"?"The island would give them anything this morning, and that somehow makes it worse.":S.mark==="OWNED"?"Nobody argues with them about anything anymore, and that makes it worse.":"It's nobody's job to decide, which is what they wanted, which is the joke."))
+  +P("Merdou walks the length of the hull, once, hands behind his back like a man at a market. Five benches. Five oars shipped neat. Somebody's kit still stowed dry under the bow — a pipe, a mending-needle, a child's carved gull.")
+  +P("“Five seats,” he says.")
+  +P("“Two of us,” Ashren says.")
+  +P("Neither of them says anything else about that.");
+  show("E8 — Five Seats, Two Men", h, { head:"⟨ CHOICE 8 — The dead have a boat. The living need one. ⟩", list:[
+    {label:"1 — “They go up to Highbasket first. All five. Then we sail.”", sub:"Graves in the cliff gardens, names unknown, faces the sea can't reach.",
+      go:()=>{S.c8=1;E8b();}},
+    {label:"2 — “Pirates' rules. The sea keeps them — and we keep the boat. Everyone watching.”", sub:"Weight, canvas, five splashes at the harbor mouth. The first thing this island ever sees you do as pirates.",
+      go:()=>{S.c8=2;E8b();}},
+    {label:"3 — “Somebody on this wharf knows these faces. Find me a name.”", sub:"Ask first. Sail after.",
+      go:()=>{S.c8=3;S.boatNamed=true;E8b();}}
+  ]});
+}
+function E8b(){
+  let h="";
+  if(S.c8===3){ h+=P("It takes an hour. The pipe does it — a wharfman goes still, turns it over, and says, “That's Herrel. Marn's cousin's crew, out of the east shoals.” So the five go up the Steps with names on them after all, and Auntie Marn closes the Kettle for the morning, and when it's done she comes down to the jetty with a brush and paints a word on the hull herself. She doesn't ask permission and they don't dream of stopping her."); }
+  if(S.c8===1){ h+=P("The graves go into Highbasket among the hanging gardens, five stones with no names, and half the district digs beside them without being asked."); }
+  if(S.c8===2){ h+=P("Weight, canvas, five splashes at the harbor mouth, the whole wharf bareheaded and silent. The first thing this island ever watched them do as pirates was give the sea its due."); }
+  h+=P("They load before the wind turns. Provisions "+(S.mark==="LIBERATED"?"pressed on them by half the district":S.mark==="OWNED"?"delivered, invoiced to no one, by people who don't wait to be thanked":"bought at fair price from a market that's arguing cheerfully about what fair means now")+". The dog watches from the jetty. The cats — all of them, which turns out to be six — walk aboard like they hold tickets, and Ashren pretends to object.")
+  +P("The island climbs away behind them, gray stone and petal-color going small in the cold bright morning. "+(S.mark==="LIBERATED"?"There's smoke over the Crown, thin and lazy — the last of the ledger fire.":S.mark==="OWNED"?"The Toll's flag flies over the Crown. Theirs now. It looks smaller from out here.":"The Crown stands empty against the sky, and somehow that looks biggest of all."))
+  +P("Merdou stands at the stern rail a long time, watching it go. Seven years of his life on that rock. The scar on his chest, older than that, pulling in the cold.")
+  +P("“Loguetown,” Ashren says from the tiller. “Where the King died and everyone starts. There'll be crews. Real ones. And papers with our island in them by now — someone will be curious.”")
+  +P("“Good.”")
+  +P("“That's it? 'Good'? Last week you told me the whole road ahead was shit.”")
+  +P("Merdou considers the wake, and the island, and the three empty benches.")
+  +P("“The road's still shit,” he says. “But it's OUR shit now. UHUHUHU!!”")
+  +P("The laugh rolls out over the water, and the gulls take it up the cliffs, and Coin Toss Island — whatever they left it — hears the man go.");
+  show("E8 — Five Seats, Two Men", h, { head:"", list:[ {label:"Continue — three days later ▸", sub:"", go:()=>E9()} ]});
+}
+
+/* ---------------- E9 (sting) ---------------- */
+function E9(){
+  let head = S.mark==="LIBERATED" ? "PIT ISLAND FREED — CHAMPION FALLS, DEBTS BURNED."
+           : S.mark==="OWNED" ? "COIN TOSS UNDER NEW MANAGEMENT — WHO ARE THEY?"
+           : "THE CROWN STANDS EMPTY — CHAMPION DEPOSED, ISLAND MASTERLESS.";
+  let sub = S.exposure==="merdou" ? "Beneath the headline, a smudged witness sketch: a bald giant. With horns."
+          : S.exposure==="ashren" ? "Beneath the headline, one word repeated down the column like a struck match: <i>LUNARIAN?</i>"
+          : S.whisper ? "Beneath the headline, a line of gossip: <i>witnesses speak of sparks...</i>"
+          : "Beneath the headline, two names nobody's ever printed before, and no pictures. Yet.";
+  let h = CARD("THE NORTH BLUE. OPEN WATER. THREE DAYS LATER.")
+  +N("In the Great Pirate Era, news travels on wings.")
+  +P("A News Coo banks out of a gray sky and drops a rolled paper onto the deck of a ship — a good ship, well-kept, sails patched neat as Sunday clothes.")
+  +P("A lean hand picks it up.")
+  +P("<b>"+head+"</b>")
+  +P(sub)
+  +P("The lean man reads it once. Reads it again.")
+  +P("Then he starts to laugh — “Kohohoho! KOHOHOHO!!” — a laugh like a cough that made something of itself, getting louder, until someone off-deck yells:")
+  +P("“Captain? What is it?”")
+  +P("He holds up the paper to people we cannot see, grinning like a boy on harvest morning.")
+  +"<div class='tbc'>[ TO BE CONTINUED ]</div>";
+  let inj=[]; if(S.ribs)inj.push("broken ribs"); if(S.arm)inj.push("a ruined arm"); if(S.broken)inj.push("a body paying for the Bell"); if(S.strain)inj.push("Ashren, overdrawn"); if(S.debtBrand)inj.push("a debt-brand on record");
+  let es = "<div class='endstate'><b>What sails to Loguetown with you:</b><br>"
+    +"Island: "+S.mark+" · Gups: "+S.gupsFate+"<br>"
+    +"Promise sworn on the Steps: "+S.promise+"<br>"
+    +"Secrets: "+(S.exposure==="none"?(S.whisper?"kept — but people talk of sparks":"kept"):("spent — "+S.exposure+" is in the world's story now"))+"<br>"
+    +"Joro: "+(S.joro==="saved"?"fishing, debt-free":S.joro==="cause"?"the man whose table started it":"somewhere out there, running")+(S.marnDebt?" · You owe Auntie Marn":"")+"<br>"
+    +"Injuries carried: "+(inj.length?inj.join(", "):"none — somehow")+"<br>"
+    +"The boat: "+(S.boatNamed?"named by Auntie Marn's own brush":"unnamed, five benches, two men")+"</div>";
+  show("Sting — The Coin Lands", h+es, { head:"", list:[ {label:"⟲ Play again — land on the other side of the coin", sub:"", go:()=>{reset();E1();}} ]});
+}
+
+reset(); E1();
+</script>
+</body>
+</html>

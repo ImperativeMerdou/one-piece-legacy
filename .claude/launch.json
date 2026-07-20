@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "coinlands",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "8493", "--directory", "."],
+      "port": 8493
+    }
+  ]
+}

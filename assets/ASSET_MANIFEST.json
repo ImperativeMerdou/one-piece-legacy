@@ -1,6 +1,39 @@
 {
   "version": "3.0",
   "protocol": "docs/creative/ASSET_PROTOCOL.md",
-  "note": "Every player-facing visual asset in the committed build is listed here. source:'original' = CSS/SVG/canvas work authored in-repo (no external license). Downloaded assets must carry full provenance fields BEFORE first use.",
-  "assets": []
+  "note": "Every player-facing visual asset in the committed build is listed here. source:'original' = CSS/SVG/canvas work authored in-repo (no external license, no attribution required, redistribution unrestricted within this private project). Downloaded assets must carry full provenance fields BEFORE first use. As of Phase 3C the entire committed asset set is original vector work — zero downloaded assets.",
+  "assets": [
+    {
+      "filename": "play/engine/backgrounds.js",
+      "source": "original",
+      "creator": "Fable (Phase 3C)",
+      "license": "project-internal original work",
+      "contents": "17 layered SVG scene backgrounds: island-establishing, gullwharf, pit-night, kettle-interior, steps-night, petal-row, highbasket, fishing-district, marine-post, propaganda-street, crown-exterior, arena-tunnel, arena-floor, arena-wrecked, debt-cells, dawn-harbor, open-sea, groomed-deck, storm-harbor",
+      "scene_usage": "all episodes",
+      "modification": "n/a",
+      "redistribution_allowed": true,
+      "overridable_via": "assets/private-overrides/overrides.js -> PRIVATE_OVERRIDES.backgrounds"
+    },
+    {
+      "filename": "play/engine/portraits.js",
+      "source": "original",
+      "creator": "Fable (Phase 3C)",
+      "license": "project-internal original work",
+      "contents": "Original ink-bust portrait system: Merdou/Ashren/Gups with 9 parameterized expressions; Marn, Hale, Priya, Cesto, Joro, Pinch, Tam, Herrel, Brakko, collector, announcer, Bruna, grandmother, dye-girl, Wornman-silhouette, cat prop",
+      "scene_usage": "all episodes",
+      "modification": "n/a",
+      "redistribution_allowed": true,
+      "overridable_via": "assets/private-overrides/overrides.js -> PRIVATE_OVERRIDES.portraits"
+    },
+    {
+      "filename": "play/engine/style.css",
+      "source": "original",
+      "creator": "Fable (Phase 3C)",
+      "license": "project-internal original work",
+      "contents": "Episode-reader visual system: 16:9 stage, dialogue/caption boxes, choice overlay, WHAT CHANGED cards, HUD, drawers, title/attack cards, cut-ins, particles, speedlines, ink splash, grain, vignette, reduced-motion support",
+      "scene_usage": "shell",
+      "modification": "n/a",
+      "redistribution_allowed": true
+    }
+  ]
 }

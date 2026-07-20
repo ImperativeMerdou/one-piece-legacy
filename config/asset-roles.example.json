@@ -1,0 +1,24 @@
+{
+  "_doc": "Committed logical-role manifest EXAMPLE — no raw private source paths. In portable fallback mode every role resolves to committed original assets (kind: svg-fallback => the engine's built-in SVG portrait/background system). Copy to config/asset-roles.local.json (gitignored) and let the asset browser / build_runtime.py fill src with .private-assets-cache/runtime/ copies for Mert private mode.",
+  "mode": "fallback",
+  "roles": {
+    "bg.cointoss.pit.wide.night":      { "src": "svg:pit-night", "kind": "svg-fallback" },
+    "bg.cointoss.kettle.interior.busy":{ "src": "svg:kettle-interior", "kind": "svg-fallback" },
+    "bg.cointoss.gullwharf.exterior":  { "src": "svg:gullwharf", "kind": "svg-fallback" },
+    "bg.cointoss.steps.night":         { "src": "svg:steps-night", "kind": "svg-fallback" },
+    "char.merdou.neutral":             { "src": "svg:merdou/neutral", "kind": "svg-fallback", "anchor": "bottom" },
+    "char.merdou.laugh":               { "src": "svg:merdou/grin", "kind": "svg-fallback", "anchor": "bottom" },
+    "char.merdou.angry":               { "src": "svg:merdou/angry", "kind": "svg-fallback", "anchor": "bottom" },
+    "char.ashren.neutral":             { "src": "svg:ashren/neutral", "kind": "svg-fallback", "anchor": "bottom" },
+    "char.ashren.smug":                { "src": "svg:ashren/smug", "kind": "svg-fallback", "anchor": "bottom" },
+    "char.brakko.ready":               { "src": "svg:brakko/angry", "kind": "svg-fallback", "anchor": "bottom" },
+    "npc.marn.neutral":                { "src": "svg:marn/neutral", "kind": "svg-fallback", "anchor": "bottom" },
+    "npc.joro.afraid":                 { "src": "svg:joro/shock", "kind": "svg-fallback", "anchor": "bottom" },
+    "npc.collector.left":              { "src": "svg:collector/serious", "kind": "svg-fallback", "anchor": "bottom" },
+    "vfx.impact.white":                { "src": "svg:fx/flash", "kind": "svg-fallback" },
+    "vfx.speedlines.horizontal":       { "src": "svg:fx/speedlines", "kind": "svg-fallback" },
+    "ui.choice.frame":                 { "src": "svg:ui/choice", "kind": "svg-fallback" },
+    "ui.location.card":                { "src": "svg:ui/card", "kind": "svg-fallback" },
+    "ui.consequence.card":             { "src": "svg:ui/panel", "kind": "svg-fallback" }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Logical asset role mapping",
+  "description": "Maps logical asset roles (the only asset names story/engine code may use) to concrete art. The LOCAL file (config/asset-roles.local.json, gitignored) may reference private-library files via cache copies; the committed example must not contain private paths. Role grammar: <layer>.<subject>.<qualifier...> e.g. bg.cointoss.pit.wide.night, char.merdou.laugh, npc.joro.afraid, vfx.impact.white, ui.choice.frame.",
+  "type": "object",
+  "properties": {
+    "generated": { "type": "string" },
+    "mode": { "enum": ["private", "fallback"] },
+    "roles": {
+      "type": "object",
+      "propertyNames": { "pattern": "^(bg|char|npc|vfx|ui|icon|prop)\\.[a-z0-9_.-]+$" },
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "src": { "type": "string", "description": "Runtime URL relative to play/ (cache copy in private mode; committed fallback otherwise)" },
+          "id": { "type": "string", "description": "Asset index id (private mode only)" },
+          "kind": { "enum": ["image", "svg-fallback", "composite"] },
+          "anchor": { "enum": ["center", "bottom", "top", "left", "right", "bottom-left", "bottom-right"] },
+          "scale": { "type": "number" },
+          "offset": { "type": "array", "items": { "type": "number" }, "minItems": 2, "maxItems": 2 },
+          "crop": { "type": "array", "items": { "type": "number" }, "minItems": 4, "maxItems": 4, "description": "x,y,w,h in source pixels applied at build time" },
+          "flip": { "type": "boolean" },
+          "temp": { "type": "boolean", "description": "TEMP_VISUAL_MODEL or below-threshold candidate explicitly marked temporary" },
+          "score": { "type": "number", "minimum": 0, "maximum": 100 },
+          "family": { "type": "string" },
+          "notes": { "type": "string" }
+        },
+        "required": ["src", "kind"]
+      }
+    }
+  },
+  "required": ["roles"]
+}

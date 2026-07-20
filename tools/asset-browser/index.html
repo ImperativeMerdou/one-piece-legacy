@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ASSET BROWSER — private dev tool</title>
+<style>
+:root{--bg:#14161c;--panel:#1c1f27;--line:#2c3140;--tx:#d6dae2;--dim:#8b93a2;--acc:#d8b64a}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font:13px/1.4 Consolas,monospace}
+header{display:flex;gap:.6em;align-items:center;padding:.5em .8em;background:var(--panel);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5;flex-wrap:wrap}
+header input,header select{background:#10131a;border:1px solid var(--line);color:var(--tx);padding:.3em .5em;border-radius:4px}
+header b{color:var(--acc)}
+#grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;padding:10px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:6px;cursor:pointer;position:relative}
+.card:hover{border-color:var(--acc)}
+.card img{width:100%;height:110px;object-fit:contain;background:
+ repeating-conic-gradient(#22252e 0 25%,#1a1d24 0 50%) 0 0/16px 16px;border-radius:4px}
+.card .cap{margin-top:4px;color:var(--dim);font-size:11px;word-break:break-all}
+.card .badges{position:absolute;top:8px;left:8px;display:flex;gap:3px}
+.badge{font-size:10px;background:#000a;padding:1px 4px;border-radius:3px}
+.fav{color:#ffd98a}.rej{color:#e06060}.role{color:#7ec8a0}
+#pager{padding:8px 12px;color:var(--dim)}
+#pager button{margin-right:6px}
+button{background:#242836;border:1px solid var(--line);color:var(--tx);padding:.25em .7em;border-radius:4px;cursor:pointer}
+button:hover{border-color:var(--acc)}
+#detail{position:fixed;inset:0;background:#000c;display:none;z-index:20;padding:2vh 2vw}
+#detail.on{display:flex;gap:12px}
+#dmain{flex:3;background:var(--panel);border-radius:8px;display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative}
+#dmain img{max-width:100%;max-height:100%;image-rendering:auto}
+#dmain.stagepreview{background:linear-gradient(#1a2432,#0d1118)}
+#dside{flex:1;background:var(--panel);border-radius:8px;padding:12px;overflow:auto;min-width:300px}
+#dside h3{margin:.2em 0;color:var(--acc)}
+#dside .kv{color:var(--dim)}#dside .kv b{color:var(--tx)}
+#dside input,#dside select{width:100%;background:#10131a;border:1px solid var(--line);color:var(--tx);padding:.3em;border-radius:4px;margin:.2em 0}
+#cmp{position:fixed;right:10px;bottom:10px;background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:6px;display:flex;gap:6px;z-index:6}
+#cmp img{width:90px;height:70px;object-fit:contain}
+.dupband{grid-column:1/-1;color:var(--acc);border-bottom:1px solid var(--line);padding:4px 2px}
+</style>
+</head>
+<body>
+<header>
+ <b>ASSET BROWSER</b>
+ <input id="q" placeholder="search name / id / rel" size="26">
+ <select id="ftop"><option value="">all folders</option></select>
+ <select id="fcat"><option value="">all categories</option></select>
+ <select id="ffam"><option value="">all families</option></select>
+ <select id="falpha"><option value="">alpha: any</option><option value="1">transparent</option><option value="0">opaque</option></select>
+ <select id="fsize"><option value="">size: any</option><option value="big">≥900w</option><option value="mid">300–900w</option><option value="small">&lt;300w</option></select>
+ <select id="fmark"><option value="">marks: any</option><option value="fav">favourites</option><option value="rej">rejected</option><option value="role">has role</option></select>
+ <label><input type="checkbox" id="fdup"> group duplicates</label>
+ <button id="exportBtn" title="download marks + role map as asset-roles.local.json content">EXPORT MARKS</button>
+ <span id="stats" style="color:var(--dim)"></span>
+</header>
+<div id="grid"></div>
+<div id="pager"></div>
+<div id="cmp"></div>
+<div id="detail"><div id="dmain"><img id="dimg"></div><div id="dside"></div></div>
+<script>
+const THUMB=id=>`/.private-assets-cache/thumbs/${id}.png`;
+const RAWBASE='http://localhost:8494/ONE%20PIECE%20ASSETS%20AND%20RESEARCH/';
+let IDX=null, VIEW=[], PAGE=0, PER=180, MARKS={}, CMP=[];
+const LS='op_asset_marks_v1';
+try{MARKS=JSON.parse(localStorage.getItem(LS))||{}}catch(e){MARKS={}}
+const mark=id=>MARKS[id]||(MARKS[id]={});
+const save=()=>localStorage.setItem(LS,JSON.stringify(MARKS));
+fetch('/.private-assets-cache/index.json').then(r=>r.json()).then(j=>{IDX=j;boot();});
+function opts(sel,vals){const s=document.getElementById(sel);[...new Set(vals)].sort().forEach(v=>{const o=document.createElement('option');o.value=o.textContent=v;s.appendChild(o);});}
+function boot(){
+  const rs=IDX.records.filter(r=>r.dhash);
+  opts('ftop',rs.map(r=>r.top)); opts('fcat',rs.map(r=>r.cat)); opts('ffam',rs.map(r=>r.family));
+  ['q','ftop','fcat','ffam','falpha','fsize','fmark','fdup'].forEach(id=>document.getElementById(id).addEventListener('input',()=>{PAGE=0;refilter();}));
+  document.getElementById('exportBtn').onclick=exportMarks;
+  refilter();
+}
+function refilter(){
+  const q=document.getElementById('q').value.toLowerCase(),
+        top=document.getElementById('ftop').value, cat=document.getElementById('fcat').value,
+        fam=document.getElementById('ffam').value, al=document.getElementById('falpha').value,
+        sz=document.getElementById('fsize').value, mk=document.getElementById('fmark').value;
+  VIEW=IDX.records.filter(r=>{
+    if(!r.dhash)return false;
+    if(q&&!(r.name.toLowerCase().includes(q)||r.id.includes(q)||r.rel.toLowerCase().includes(q)))return false;
+    if(top&&r.top!==top)return false; if(cat&&r.cat!==cat)return false; if(fam&&r.family!==fam)return false;
+    if(al==='1'&&!r.alpha)return false; if(al==='0'&&r.alpha)return false;
+    if(sz==='big'&&!(r.w>=900))return false; if(sz==='mid'&&!(r.w>=300&&r.w<900))return false; if(sz==='small'&&!(r.w<300))return false;
+    const m=MARKS[r.id]||{};
+    if(mk==='fav'&&!m.fav)return false; if(mk==='rej'&&!m.rej)return false; if(mk==='role'&&!m.role)return false;
+    return true;
+  });
+  if(document.getElementById('fdup').checked){VIEW.sort((a,b)=>(a.dup_near||a.dup_exact||'zz').localeCompare(b.dup_near||b.dup_exact||'zz'));}
+  else VIEW.sort((a,b)=>(b.w*b.h||0)-(a.w*a.h||0));
+  render();
+}
+function render(){
+  const g=document.getElementById('grid');g.innerHTML='';
+  const slice=VIEW.slice(PAGE*PER,(PAGE+1)*PER);
+  let lastDup=null;
+  slice.forEach(r=>{
+    if(document.getElementById('fdup').checked){
+      const d=r.dup_near||r.dup_exact||'(unique)';
+      if(d!==lastDup){lastDup=d;const b=document.createElement('div');b.className='dupband';b.textContent='GROUP '+d;g.appendChild(b);}
+    }
+    const m=MARKS[r.id]||{};
+    const c=document.createElement('div');c.className='card';
+    c.innerHTML=`<div class="badges">${m.fav?'<span class="badge fav">★</span>':''}${m.rej?'<span class="badge rej">✕</span>':''}${m.role?`<span class="badge role">${m.role}</span>`:''}${r.dup_role==='canonical'?'<span class="badge">C</span>':''}</div>
+      <img loading="lazy" src="${THUMB(r.id)}"><div class="cap">${r.id} · ${r.w}×${r.h}${r.ext}<br>${r.rel.split('/').slice(0,-1).join('/')}</div>`;
+    c.onclick=()=>detail(r);
+    g.appendChild(c);
+  });
+  document.getElementById('stats').textContent=`${VIEW.length} shown / ${IDX.total} scanned (v${IDX.version})`;
+  const pg=document.getElementById('pager');pg.innerHTML='';
+  const pages=Math.ceil(VIEW.length/PER);
+  if(pages>1){for(let i=0;i<pages;i++){const b=document.createElement('button');b.textContent=i+1;if(i===PAGE)b.style.borderColor='var(--acc)';b.onclick=()=>{PAGE=i;render();window.scrollTo(0,0);};pg.appendChild(b);}}
+}
+function detail(r){
+  const d=document.getElementById('detail');d.classList.add('on');
+  const img=document.getElementById('dimg');
+  img.src=RAWBASE+encodeURIComponent(r.rel).replace(/%2F/g,'/');
+  img.onerror=()=>{img.onerror=null;img.src=THUMB(r.id);};
+  const m=mark(r.id);
+  const side=document.getElementById('dside');
+  side.innerHTML=`<h3>${r.name}</h3>
+   <div class="kv">id <b>${r.id}</b> · <b>${r.w}×${r.h}</b> · ${r.ext} · ${(r.size/1024).toFixed(0)}KB<br>
+   cat <b>${r.cat}</b> · family <b>${r.family}</b> · alpha <b>${r.alpha}</b> · frames <b>${r.frames}</b><br>
+   dup <b>${r.dup_near||r.dup_exact||'—'}</b> (${r.dup_role||'—'})<br>
+   rel <b style="word-break:break-all">${r.rel}</b><br>
+   palette ${(r.palette||[]).map(p=>`<span style="background:${p};padding:0 8px;border-radius:3px">&nbsp;</span>`).join(' ')}</div>
+   <hr style="border-color:var(--line)">
+   <button id="bfav">${m.fav?'★ unfavourite':'☆ favourite'}</button>
+   <button id="brej">${m.rej?'✓ unreject':'✕ reject'}</button>
+   <button id="bcmp">compare +</button>
+   <button id="bstage">stage preview</button>
+   <button id="bcopy">copy asset id</button>
+   <input id="brole" placeholder="logical role e.g. char.merdou.laugh" value="${m.role||''}">
+   <input id="btags" placeholder="tags comma,separated" value="${(m.tags||[]).join(',')}">
+   <button id="bclose" style="float:right">close</button>`;
+  side.querySelector('#bfav').onclick=()=>{m.fav=!m.fav;save();detail(r);refilter();};
+  side.querySelector('#brej').onclick=()=>{m.rej=!m.rej;save();detail(r);refilter();};
+  side.querySelector('#bcopy').onclick=()=>navigator.clipboard.writeText(r.id);
+  side.querySelector('#brole').onchange=e=>{m.role=e.target.value.trim();save();refilter();};
+  side.querySelector('#btags').onchange=e=>{m.tags=e.target.value.split(',').map(s=>s.trim()).filter(Boolean);save();};
+  side.querySelector('#bclose').onclick=()=>d.classList.remove('on');
+  side.querySelector('#bcmp').onclick=()=>{CMP.push(r);if(CMP.length>3)CMP.shift();renderCmp();};
+  side.querySelector('#bstage').onclick=()=>document.getElementById('dmain').classList.toggle('stagepreview');
+  d.onclick=e=>{if(e.target===d)d.classList.remove('on');};
+}
+function renderCmp(){
+  const c=document.getElementById('cmp');c.innerHTML='';
+  CMP.forEach(r=>{const i=document.createElement('img');i.src=THUMB(r.id);i.title=r.id;i.onclick=()=>detail(r);c.appendChild(i);});
+  if(CMP.length){const b=document.createElement('button');b.textContent='clear';b.onclick=()=>{CMP=[];renderCmp();};c.appendChild(b);}
+}
+function exportMarks(){
+  const roles={};
+  Object.entries(MARKS).forEach(([id,m])=>{if(m.role){const r=IDX.records.find(x=>x.id===id);if(r)roles[m.role]={id,rel:r.rel};}});
+  const blob=new Blob([JSON.stringify({generated:new Date().toISOString(),roles,marks:MARKS},null,2)],{type:'application/json'});
+  const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='asset-roles.local.json';a.click();
+}
+</script>
+</body>
+</html>

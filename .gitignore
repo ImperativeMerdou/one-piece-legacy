@@ -14,3 +14,7 @@ reference/**/*.avif
 reference/**/*.mp4
 reference/**/*.mkv
 reference/**/*.webm
+
+# Mert's private local asset overrides — loaded at runtime if present, never committed
+# (see docs/creative/ASSET_PROTOCOL.md §3)
+assets/private-overrides/

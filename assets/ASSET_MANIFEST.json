@@ -1,0 +1,6 @@
+{
+  "version": "3.0",
+  "protocol": "docs/creative/ASSET_PROTOCOL.md",
+  "note": "Every player-facing visual asset in the committed build is listed here. source:'original' = CSS/SVG/canvas work authored in-repo (no external license). Downloaded assets must carry full provenance fields BEFORE first use.",
+  "assets": []
+}

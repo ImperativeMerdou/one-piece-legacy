@@ -18,3 +18,11 @@ reference/**/*.webm
 # Mert's private local asset overrides — loaded at runtime if present, never committed
 # (see docs/creative/ASSET_PROTOCOL.md §3)
 assets/private-overrides/
+
+# Phase 4 private asset pipeline — local-only configuration and cache
+# (see docs/visual/PRIVATE_ASSET_PIPELINE.md). The private One Piece asset library
+# lives OUTSIDE the repository; these files may reference or contain copies of it
+# and are never committed.
+config/private-assets.local.json
+config/asset-roles.local.json
+.private-assets-cache/

@@ -1,0 +1,11 @@
+{
+  "_doc": "Copy to config/private-assets.local.json and adjust. The local copy is gitignored — it points at Mert's private One Piece asset library, which lives OUTSIDE the repository and is never committed, copied into tracked directories, or uploaded. Without the local file the game runs in PORTABLE FALLBACK MODE using the committed original SVG assets.",
+  "asset_root": "<absolute path to the directory named 'ONE PIECE ASSETS AND RESEARCH'>",
+  "cache_dir": ".private-assets-cache",
+  "enabled_source_folders": ["Area", "Artworks", "Collaborations", "Cutscenes", "Portrait", "Ships", "Skills", "Sprites", "UI", "v13"],
+  "index_only_folders": ["Audio", "ONE PIECE RESEARCH"],
+  "disabled_runtime_categories": ["audio", "music", "voice", "sound-effect"],
+  "private_override_locations": ["assets/private-overrides/"],
+  "index_version": 0,
+  "last_scan": null
+}

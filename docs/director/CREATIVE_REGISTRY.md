@@ -88,9 +88,11 @@ Entry format (to be used only when Mert locks something):
 
 ## Arcs
 
-- **The Prologue: "The Coin Lands"** — Coin Toss Island, 8 scenes + sting — STATUS: WORKING
-  CANON map (Fable, Phase 2B Stage 2; replaces the frozen 13-node APPROVED map, which is
-  preserved in git history) — brief: `docs/director/briefs/PROLOGUE_ARC_BRIEF.md`
+- **The Prologue: "The Coin Lands"** — Coin Toss Island, three-episode mini-saga (23 scenes
+  + 3 stings) — STATUS: WORKING CANON map v2 (Fable, Phase 3B, under Mert's Phase 3 rebuild
+  order; the Phase 2B 8-scene map is preserved in git history at tag `pre-coin-lands-saga-v2`)
+  — brief: `docs/director/briefs/PROLOGUE_ARC_BRIEF.md` · recurring cast:
+  `docs/director/briefs/COIN_TOSS_RECURRING_CAST.md`
 
 ## Canon encounters
 *(empty — none locked; on the table by Mert's direction: Smoker/Tashigi at Loguetown; Ashren–King and

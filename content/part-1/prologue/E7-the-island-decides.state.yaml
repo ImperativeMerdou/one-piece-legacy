@@ -1,0 +1,32 @@
+# Engine sidecar — E7
+scene: P1-PRO-E07
+title: The Island Decides
+location: cointoss.crown.colosseum
+entry: { requires: C6.resolved }
+cast: [merdou, ashren, gups(beaten), priya, hale, marn, joro(conditional), crowd, cells]
+opening_variants: per C6 (won-ugly / won-revealed / won-lit) — Gups's defeat beat lives here
+choice:
+  id: C7
+  axis: route            # the first World-Mark [Mert-locked fork]
+  options:
+    - id: 1
+      writes: [ mark.cointoss: LIBERATED, ferry.contract: DEAD, cells: OPENED,
+                hale.faith: CRACKED, gups.fate: sub-choice(ferry|handover) ]
+      closes: [ standing-income route, priya-as-asset ]
+      exit: P1-PRO-E08
+    - id: 2
+      writes: [ mark.cointoss: OWNED, income.toll: ACTIVE, priya: EMPLOYED,
+                ferry.contract: HELD_UNSIGNED, bond.marn: -2(fear), gups.fate: EMPLOYEE ]
+      closes: [ island-gratitude texture; Bloom-Haul-in-arena future beat ]
+      exit: P1-PRO-E08
+    - id: 3
+      writes: [ mark.cointoss: TOPPLED, machine: BROKEN, cells: OPENED,
+                gups.fate: DEPOSED_ALIVE_SMALL, island.state: FREE_LEADERLESS ]
+      closes: [ income routes; return-as-rulers texture ]
+      exit: P1-PRO-E08
+notes: >
+  Fork + first consequence in ONE scene (choose, then watch the island answer). joro.fate pays
+  off in the LIBERATE bonfire on all three C2 values. Hale's arc: sincere believer confronted
+  with the cells — cracked, not converted (his future is open). Gups is beaten but never
+  pathetic-pitiful: per-fork fates keep him a person (locked player-decided rule honored via
+  fork-shaped sub-choices).

@@ -1,0 +1,39 @@
+# Engine sidecar — E2
+scene: P1-PRO-E02
+title: The Copper Kettle
+location: cointoss.gullwharf.kettle
+entry: { requires: C1.resolved }   # three conditional openers keyed to C1
+cast: [merdou, ashren, marn, joro, collectors(2), barmaid, cat]
+choice:
+  id: C2
+  axis: resource-stance-information
+  options:
+    - id: 1  # pay the marker
+      writes:
+        - joro.fate: SAVED_QUIET
+        - purse: -MARKER   # if purse==0 (C1=1|2): debt.marn=true (she owns a favor)
+        - bond.marn: +2
+        - heat.collectors: +1
+      closes: []
+      exit: P1-PRO-E03
+    - id: 2  # name the fix
+      writes:
+        - joro.fate: PUBLIC_CAUSE
+        - fix.named_publicly: true    # event: E4's challenge is already half-made tonight
+        - gups.alert: +2
+        - bond.crowd: +1
+        - bond.marn: +1(worried)
+      closes: []
+      exit: P1-PRO-E03
+    - id: 3  # ferry intel
+      writes:
+        - joro.fate: RAN
+        - heat.collectors: +2         # event: humiliated collectors retaliate vs the Kettle in E4 window
+        - kettle.threatened: true
+        - bond.marn: +1(complicit)
+      closes: []
+      exit: P1-PRO-E03
+notes: >
+  The Ferry is never named aloud by any local — enforced in prose on all routes. Flame-sputter
+  gag = exposure-safe (sparks read as tinderbox coat; no lunarian whisper unless later scenes
+  escalate). joro.fate returns in E7 fork texture on all three values.

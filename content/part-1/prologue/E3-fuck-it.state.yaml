@@ -1,0 +1,29 @@
+# Engine sidecar — E3
+scene: P1-PRO-E03
+title: Fuck It
+location: cointoss.steps
+entry: { requires: C2.resolved }
+cast: [merdou, ashren, dog]
+disclosure:
+  # Progressive-disclosure ledger (Mert lock: full mutual honesty exists BY DEPARTURE)
+  merdou_reveals: [patricide(fact only), unworthy-son(shape only)]
+  merdou_banks: [the Bull, the theft, the name's full weight, family members]  # surfaces E6/E8+
+  ashren_reveals: [wings(full), genocide(fact), taken parent, the dream, why-he-stayed]
+  ashren_banks: [information bounty details, concealment history]              # surfaces E6/E8
+choice:
+  id: C3
+  axis: promise
+  options:
+    - id: 1
+      writes: [ promise.tribe: SWORN ]          # Promise Ledger entry #1, kept/broken tracked
+      exit: P1-PRO-E04
+    - id: 2
+      writes: [ promise.ground: SWORN, bond.ashren: friction-now-respect-later ]
+      exit: P1-PRO-E04
+    - id: 3
+      writes: [ promise.island-for-tribe: CONTRACT, dream.tag: DREAM+ ]
+      exit: P1-PRO-E04
+notes: >
+  No narrator in this scene at all. Peak line is four words. Ashren's confession is longer than
+  Merdou's BY DESIGN (he talks too much when emotional — in-character), Merdou's is blunt.
+  No symmetrical dump: details banked per disclosure ledger.

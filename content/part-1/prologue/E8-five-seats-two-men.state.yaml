@@ -1,0 +1,34 @@
+# Engine sidecar — E8
+scene: P1-PRO-E08
+title: Five Seats, Two Men
+location: cointoss.gullwharf.jetty
+entry: { requires: C7.resolved }
+cast: [merdou, ashren, marn(conditional), wharfmen, netmender, dog, cats(6)]
+disclosure_check:
+  # Mert lock: full mutual honesty BY DEPARTURE — banked E3 items resolved off-page during the
+  # fight week + this morning; state records completion:
+  writes: [ mutual.honesty: COMPLETE ]
+choice:
+  id: C8
+  axis: public-stance-information
+  options:
+    - id: 1
+      writes: [ five.buried: HIGHBASKET_UNNAMED, bond.island: +2 ]
+      exit: STING
+    - id: 2
+      writes: [ five.buried: SEA_PIRATE_RITE, rumor.seed: FIRST_ACT_AS_PIRATES ]
+      exit: STING
+    - id: 3
+      writes: [ five.buried: NAMED_HERREL_CREW, boat.named: BY_MARN, bond.marn: +3 ]
+      closes: []   # only route where the boat gains a name in the prologue
+      exit: STING
+per_mark_texture: provisions + closing image vary by mark.cointoss (3 variants, in prose)
+carried_to_loguetown:
+  - injuries: [merdou.ribs?, merdou.arm?, cond.broken?, ashren.strain?]
+  - exposure: [none | whisper | merdou | ashren]
+  - promises: [tribe | ground | island-for-tribe]
+  - mark.cointoss + gups.fate + joro.fate + debt.brand? + boat.named? + purse/debt state
+notes: >
+  Five-dead beat kept mundane per Mert lock — no mystery, no meaning, staged among people who
+  know sea-death. The child's carved gull is texture, not a plant. Wrong-beliefs payoff done in
+  dialogue ("our shit now"), zero narration.

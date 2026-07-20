@@ -1,0 +1,14 @@
+# Engine sidecar — E9 (sting)
+scene: P1-PRO-E09
+title: The Coin Lands (sting)
+location: northblue.open-water.groomed-ship
+entry: { requires: C8.resolved }
+cast: [wornman(unnamed silhouette), crew(off-page voice), news-coo]
+choice: none   # Pure Narrative Continuation (locked exception 1)
+reads: [ mark.cointoss, exposure.* ]   # headline + sub-line assembled from state (5 variants)
+writes: [ newscoo.delivered: true ]    # the Loguetown recruitment hook is now live
+notes: >
+  Narrator appears for exactly one italic line — his only line since E1's location card.
+  Wornman never named; identified only by the Kohohoho cough-laugh (brief). This is the
+  contract's News-Coo hook firing on-screen: the player's first world-mark literally summons
+  Part I's plot.

@@ -1,0 +1,34 @@
+# Engine sidecar — E5
+scene: P1-PRO-E05
+title: Champion's Rules
+location: cointoss.crown.colosseum
+entry: { requires: C4.resolved }   # three route entries (camp/dig/wager)
+cast: [merdou, ashren, gups(box), referee, official, brakko, goons(5), announcer, crowd]
+conditional_texture:
+  - if: week.route==DIG then drugged-water beat gains the itemized-ledger line; referee nervous
+  - if: allin then goons fight scared (their own money is on the champion)
+  - if: cond.sharp then gauntlet prose favors clean reads; if cond.worn, sloppier, costlier
+choice:
+  id: C5
+  axis: relationship-sacrifice
+  options:
+    - id: 1  # Merdou takes the worst
+      writes: [ injury.merdou.ribs: true ]      # persists into E6 and to Loguetown
+      exit: P1-PRO-E06 (carrying damage)
+    - id: 2  # Ashren takes it
+      writes: [ ashren.strain: true, exposure.whisper: maybe ]
+      # event: if any spark slips, exposure.whisper=true (E6/E8 rumor texture)
+      exit: P1-PRO-E06
+    - id: 3  # together, sanction broken
+      writes: [ sanction.broken: true ]
+      # event: E6 phase 1 (Showman) is SKIPPED — no referee, no ritual; Gups opens angrier
+      exit: P1-PRO-E06 (unsanctioned variant)
+loss_branch:
+  trigger: gauntlet defeat (authored fail-state, reachable on cond.worn + option 2 misplay path)
+  writes: [ debt.brand: true, entry.e6: FROM_CELLS ]
+  if_allin: debt.brand applies to BOTH; stakes forfeit
+  note: never game-over; permanent number; E6 still occurs on Gups's terms
+notes: >
+  Hygiene trait defeats the drug — comedy from character, not luck. Hooked net = seeded prop
+  (returns in E6 vs Electro if players think of it; noted for fight design). Merdou attack
+  usage this scene: MANNERS!! and DEAD LIFT only — CLOSING TIME reserved for E6.

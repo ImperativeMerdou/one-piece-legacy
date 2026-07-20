@@ -1,0 +1,33 @@
+# Engine sidecar — E4
+scene: P1-PRO-E04
+title: The Unbeaten
+location: cointoss.crown.gate
+entry: { requires: C3.resolved }
+cast: [merdou, ashren, gups, hale, goons(6), crowd, kid]
+conditional_texture:
+  - if: fix.named_publicly   # C2=2
+    then: crowd arrives pre-heated; Gups accepts one beat faster (he must)
+  - if: kettle.threatened    # C2=3
+    then: collectors visible on the Steps watching the Kettle; Marn line added
+  - if: gups.alert>=2
+    then: weigh-in clause gets one extra sinister sentence
+choice:
+  id: C4
+  axis: route
+  options:
+    - id: 1  # train
+      writes: [ cond.sharp: true, island.pressure: +2, week.route: CAMP ]
+      # event: if joro.fate==SAVED_QUIET or RAN, collectors squeeze the Kettle during camp week
+      exit: P1-PRO-E05 (camp entry)
+    - id: 2  # break the fix
+      writes: [ fix.exposed: true, cond.worn: true, bond.crowd: +2, week.route: DIG ]
+      # event: E5 loses drugged-water + crooked-referee tools; Gups enters E6 angry
+      exit: P1-PRO-E05 (dig entry)
+    - id: 3  # all in
+      writes: [ allin: true, purse: STAKED, week.route: WAGER ]
+      # event: E5/E6 must be clean&traceable-fair; loss branch upgrades to debt.brand for BOTH
+      exit: P1-PRO-E05 (wager entry)
+notes: >
+  Gups's ideology speech is deliberately the longest speech in the prologue (villains get the
+  paragraphs). Hale = sincere-justice foil; never corrupt, only captured. The cage: his OWN myth
+  forces acceptance — cowardice and pride in one beat.

@@ -1,0 +1,37 @@
+# Engine sidecar — E1 (spec: docs/runtime/STORY_ENGINE.md)
+scene: P1-PRO-E01
+title: Baldy the Magnificent
+location: cointoss.gullwharf.pit
+entry: {}                      # campaign start
+cast: [merdou, ashren, gups, brakko, announcer, dye-girl, grandmother]
+choice:
+  id: C1
+  axis: tactic-resource
+  options:
+    - id: 1  # comeback show
+      writes:
+        - rep.pit: SHOWMAN            # event: the island gets a comeback story
+        - gups.alert: +2              # Gups accelerates countermeasures
+        - purse: 0                    # Ashren's bet against him is lost
+        - bond.ashren: banter.lost-bet
+      closes: []
+      exit: P1-PRO-E02 (opener A)
+    - id: 2  # fast and ugly
+      writes:
+        - rep.pit: MEAN
+        - gups.alert: +1
+        - goons.fear: true            # event: goons refuse fair matches after this
+        - purse: 0
+      closes: []
+      exit: P1-PRO-E02 (opener B)
+    - id: 3  # throw the match
+      writes:
+        - rep.pit: JOKE
+        - gups.alert: -1              # event: Gups relaxes; rigging budget stays low in E4/E5
+        - purse: +BIG                 # funds C2 option 1 without Marn debt
+        - bond.ashren: smug-all-night
+      closes: []
+      exit: P1-PRO-E02 (opener C)
+notes: >
+  Brakko survives all routes (recurring goon). Steel-in-pit is public: witness tags full-pit on
+  every option. No exposure flags — the turn is anger and skill, not Haki or the Bull.

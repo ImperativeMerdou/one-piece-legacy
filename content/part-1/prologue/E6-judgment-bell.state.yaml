@@ -1,0 +1,39 @@
+# Engine sidecar — E6
+scene: P1-PRO-E06
+title: Judgment Bell
+location: cointoss.crown.colosseum
+entry: { requires: C5.resolved | loss_branch(FROM_CELLS) }
+cast: [merdou, ashren, gups, referee, goons, crowd(40 rows), cells(visible in phase 3)]
+fight:
+  brief: docs/director/briefs/YURI_GUPS_ENEMY_BRIEF.md (phases + kit locked there)
+  argument: "The island's spectacle is a lie, and the two men the lie was built to avoid have
+             finally stepped into the ring."
+  geography: copper mosaic circuit / dead stone rows / bell + chain / benches / barriers /
+             champion's gate + cells behind it
+  discovery_order: floor-bite (no tell) -> Ashren reads the wiring -> stone-row dance ->
+                   first unscripted hit -> real Armament -> panic floor-flood -> the cells ->
+                   the Bell
+conditional_texture:
+  - if: sanction.broken then phase 1 SKIPPED (opens at Monster, angrier)
+  - if: fix.exposed then referee refuses two crooked calls (crowd knows why)
+  - if: injury.merdou.ribs then damage-carry lines active
+  - if: entry==FROM_CELLS then Merdou fights branded; crowd sympathy texture shifts
+choice:
+  id: C6
+  axis: sacrifice-information   # the concealment crisis (Mert-locked model node)
+  options:
+    - id: 1  # hold the disguise
+      writes: [ injury.merdou.arm: true, cond.broken: true, secrets: INTACT ]
+      exit: P1-PRO-E07 (won ugly)
+    - id: 2  # the horns
+      writes: [ exposure.merdou: true, headline.seed: HORNED_MAN, witness.count: FULL_ARENA ]
+      exit: P1-PRO-E07 (won revealed)
+    - id: 3  # Ashren burns (his offer; player accepts or refuses in-line)
+      writes: [ exposure.ashren: true, hunted.flag: PLANTED, bond.ashren: DEBT_OF_FIRE ]
+      sub: refusal collapses to option 1 with bond.ashren: REFUSED_HIS_FIRE (tracked)
+      exit: P1-PRO-E07 (won lit)
+notes: >
+  Gups is NEVER reduced to crying — panic = escalation without limits (brief). His ideology
+  speech opens the fight (villains get paragraphs). Ashren's crusader switch = talks TOO MUCH,
+  flat and fast (in-character anger). Gups's defeat beat itself is written at the top of E7
+  (per-C6 variant) so the choice lands as the scene's cliff.
